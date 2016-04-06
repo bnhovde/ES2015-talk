@@ -11,36 +11,40 @@ The main differences between regular old functions and arrow functions are:
 
 Example:
 
-    {
-        const monsters = [
-            'frankenstein',
-            'the thing',
-            'inventor of ...'
-        ]
-        
-        monsters.map( function(animal) {
-            return 'Help! It/'s' )+ animal;
-        });
-        
-        
-    };
+```javascript
+{
+    const monsters = [
+        'frankenstein',
+        'the thing',
+        'inventor of ...'
+    ]
+    
+    monsters.map( function(animal) {
+        return 'Help! It/'s' )+ animal;
+    });
+    
+    
+};
+```
 
 Now, with arrow functions:
 
 Example:
 
-    {
-        const person = {
-            name: 'Tim Samson',
-            features: {
-                face: 'round',
-                arms: 'sort',
-                hair: false
-            }
+```javascript
+{
+    const person = {
+        name: 'Tim Samson',
+        features: {
+            face: 'round',
+            arms: 'sort',
+            hair: false
         }
-        
+    }
+    
 
-    };
+};
+```
 
 You can use destructuring for other things too.
 
@@ -51,21 +55,22 @@ Useful when you only care about certain parameters
 
 Example:
 
-    {
-        const menu = {
-            appetiser: 'flea soup'
-            mains: 'locust eggs'
-            dessert: 'goblin sorbet'
-        }
-        
-        function orderDessert({dessert}){
-            console.log('Can I please have a bucket of ' + dessert + ', please?');
-        }
-        
-        orderDessert(menu); // Can I please have a bucket of goblin sorbet, please?
-        
-    };
-
+```javascript
+{
+    const menu = {
+        appetiser: 'flea soup'
+        mains: 'locust eggs'
+        dessert: 'goblin sorbet'
+    }
+    
+    function orderDessert({dessert}){
+        console.log('Can I please have a bucket of ' + dessert + ', please?');
+    }
+    
+    orderDessert(menu); // Can I please have a bucket of goblin sorbet, please?
+    
+};
+```
 
 ## Implicit return
 
@@ -73,19 +78,19 @@ If one line, returns whatever on that line (no return statement needed)
 
 Example:
 
-    {
-        const person = {
-            name: 'Draco',
-            age: 673
-        }
-        
-        const { name = 'Ricardo', height = '180cm' } = person;
-        
-        console.log(name);      // Draco
-        console.log(height);    // 180cm
-    };
-
-
+```javascript
+{
+    const person = {
+        name: 'Draco',
+        age: 673
+    }
+    
+    const { name = 'Ricardo', height = '180cm' } = person;
+    
+    console.log(name);      // Draco
+    console.log(height);    // 180cm
+};
+```
 
 ## Use case: 
 
