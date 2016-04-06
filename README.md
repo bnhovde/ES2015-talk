@@ -59,6 +59,7 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     Legend:
     
     [bracketed contents] = Slide indicator;
+    !DEMO = Deno indicator;
     (TIME: 60) = Timing indicator;
 
 ## Introduction
@@ -177,10 +178,13 @@ External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
 
 ## Approach
 
-- Show es5 module, update to es6
+> !DEMO = show app
+
+I've created a simple app that simulates the americal election system. I know you're not supposed to mix politics and tech talks, but this is a fictional election. Any resemblence to real people is absolutely coincidental.
+
+Anyway, the module is written in ES5, and as I go through the new features I'll dive in and update the app to use these.
 
 (TIME: 30)
-
 
 ## New features
 
