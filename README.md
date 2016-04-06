@@ -31,8 +31,8 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     * ES6/2015
     * browser support
     * Babel   
+* Approach
 * New features
-    * Approach
     * let, const
     * destructuring
     * arrow functions
@@ -56,17 +56,22 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
 
 # Transcript
 
+    Legend:
+    
+    [bracketed contents] = Slide indicator;
+    (TIME: 60) = Timing indicator;
+
 ## Introduction
 
 Hi all, thanks for coming.
 
-My name is Bård, I’m a Front-End Developer down at CDD, we’re a small digital agency.
+My name is Bård, I’m a Front-End Developer working at CDD, we’re a small digital agency.
 
 I’m gonna be talking about ES6 today, and also touch on ES7 and even 8 if there’s time.
 
 My goal here today is that you all go away knowing more than you do now, maybe see something you like and can take and put into your product or hobby project.
 
-I'd like everyone to leave feeling like they have a full understanding of where javaScript is and where it's going. 
+I'd like everyone to leave feeling like they have a full understanding of where javaScript is right now and where it's going. 
 
 Lastly, if you’re a javaScript hater then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
 
@@ -95,7 +100,11 @@ __
     
 This is the agenda. I'm first gonna talk about the state of javaScript in 2016. 
 
-The biggest part of the talk will be going through the new features. There's a lot of them [image of features], so I'll primarily focus on the ones that will most likely benefit you.
+The biggest part of the talk will be going through the new features. 
+
+> [list of features]
+
+There's a lot of them, so I'll primarily focus on the ones that will most likely benefit you.
 
 Before I go through the features I'll show you a javaScript library I've written without ES6, and as I tick off the features I'll implement these into the ES5 library to demonstrate use cases.
 
@@ -104,7 +113,7 @@ Before I go through the features I'll show you a javaScript library I've written
 
 The javaScript ecosystem in 2016 is a pretty chaotic place. There's lots of articles written on this, and you've probably heard phrases like "javaScript fatigue" or "tooling fatigue" being used.
 
-If you've tried setting up a modern js javaScript stack from scratch in the last year you've probably felt some of this pain. Have a look at this. [slide showing folder] This is the root folder of a very popular Redux/React "starter kit".
+If you've tried setting up a modern js javaScript stack from scratch in the last year you've probably felt some of this pain. Have a look at this. > [slide showing folder] This is the root folder of a very popular Redux/React "starter kit".
 
 The amount of config and dotfiles are staggering. What do they all do? If you're just starting out with javaScript in 2016 you're in for a rough ride, so thread carefully!
 
@@ -123,37 +132,84 @@ We don't want to go back to having one monolithic library doing everything like 
 Pendulum..
 
 What we got out of it was a better unpublishing rules from npm.
-
 ...
+
 
 ### ES6/2015
 
-Okay, so 
+Okay, so where does that leave ES6?
 
-It's big!
+First of all, let's clear up the naming confusion.
+
+> [... ES5, ES6 || ES2015, ES2016, ES2017, ...]
+
+They're the same thing, with the old and the new naming conventions
+
+The ES6 spec was finalised by the TC39 committee in June 2015, after 6 years or work.
+
+> [It's big!]
+
+6 years is a lot, so ES6 is big. It's way too big, which is why after ES6 TC39 has decided to do adopt yearly releases, hencey the new naming convention.
+
+This is good for a few reasons:
+
+- We don't have to wait for 6 years for new features
+- Browsers should adopt faster
+- Once you're on top of ES6, then hopefully future releases will seem less daunting.
 
 
 ### browser support
 
 
+
+
 #### Babel
+- Stages
 
 
-Show agenda
-Something for everyone
-Show es5 module, update to es6
+#### Approach
 
+- Show es5 module, update to es6
+
+(TIME: 30)
 
 
 # New features
 
-[image of features]
+> [image of features]
+
+    * let, const
+    * destructuring
+    * arrow functions
+    * Object method shorthands / Concise Object Methods
+    * Modules
+    * Promises
+    * for of
+    * Object.assign
+    * Classes
+    * Template strings
+    * Object literals
+    
+
+(TIME: 60)
+
+# Useful patterns
 
 
+# 3rd party libraries?
 
 
+# ES7/2016 and beyond
+
+    * Observables
+    * Async await (ES8/2017)
+    
+    
 # Final thoughts
 
+    * CTA's
+    * Q&A
+    
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
 
 Don't get fatigued! Keep it simple!
