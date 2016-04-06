@@ -19,7 +19,7 @@ Example:
         ]
         
         monsters.map( function(animal) {
-            
+            return 'Help! It/'s' )+ animal;
         });
         
         
