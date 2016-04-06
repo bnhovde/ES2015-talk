@@ -158,12 +158,22 @@ This is good for a few reasons:
 
 ### browser support
 
+Browser support for es6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
+
+External link: [http://kangax.github.io/compat-table/es6](http://kangax.github.io/compat-table/es6)
 
 
+That's okay though, we've got babel.
 
 ### Babel
-- Stages
 
+Babel transpiles modern js features into ES5. How does it work? Magic..
+
+#### Stages
+
+Now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
+
+External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
 
 ## Approach
 
