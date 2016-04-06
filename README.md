@@ -5,7 +5,7 @@ Talk outline and transcript + source code for demo & examples.
 Slides will be located [here](https://slides.com/bardhovde/es2015/) when completed.
 
 
-# Talk Proposal
+## Talk Proposal
 
 #### What is the talk about? – What will it mainly cover?
 The talk is about ES6, the new version of ECMAscript. It will cover the new features, provide tips on getting started and will also cover some ES7/ES8 features.
@@ -22,7 +22,7 @@ The talk is for anyone interested in the current state of javaScript in 2016. So
 I'll try to cover the material in an intuitive way. I won't go too deep, but deep enough to show how it's all connected. Hopefully I'll give you a broad understanding of the javaScript ecosystem as a whole.
 
 
-# Outline
+## Outline
 
 * Introduction
     * About me 
@@ -54,7 +54,7 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     * CTA's
     * Q&A
 
-# Transcript
+## Transcript
 
     Legend:
     
@@ -79,13 +79,11 @@ So!
 
 __
 
-## About me
+### About me
 
 Who am I, and how am I qualified to be here talking to you all? Good question.
 
-First of all, let's just get the weird name out of the way! Bård.
-
-It gives me grief when I fill in forms that 
+First of all, let's just get the weird name out of the way!
 
 ...
 
@@ -163,18 +161,18 @@ This is good for a few reasons:
 
 
 
-#### Babel
+### Babel
 - Stages
 
 
-#### Approach
+## Approach
 
 - Show es5 module, update to es6
 
 (TIME: 30)
 
 
-# New features
+## New features
 
 > [image of features]
 
@@ -193,19 +191,19 @@ This is good for a few reasons:
 
 (TIME: 60)
 
-# Useful patterns
+## Useful patterns
 
 
-# 3rd party libraries?
+## 3rd party libraries?
 
 
-# ES7/2016 and beyond
+## ES7/2016 and beyond
 
     * Observables
     * Async await (ES8/2017)
     
     
-# Final thoughts
+## Final thoughts
 
     * CTA's
     * Q&A
@@ -216,7 +214,7 @@ Don't get fatigued! Keep it simple!
 
 
 
-# Useful resources
+## Useful resources
 
 * [Getting started with webpack and React, ES6 style](http://humaan.com/getting-started-with-webpack-and-react-es6-style/)
 * [Sugar &amp; Spice and everything nice about ES6 (Nodevember 2015)](http://benmvp.github.io/slides/nodevember2015-es6.html#/)
