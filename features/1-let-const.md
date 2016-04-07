@@ -102,3 +102,4 @@ For future projects:
 - use let for variables that will change over time
 - use const for variables which cannot be reassigned
 - when writing ES6, there are few use-cases for `var` any more
+- use `var` to indicate legacy code

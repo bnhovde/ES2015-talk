@@ -1,0 +1,22 @@
+[{
+    "Clintface" : {
+        "name"      : "Hilarious Clintface",
+        "alignment" : "True Neutral",
+        "party"     : "Democrat",
+        "funding"   : 100000
+    },
+    
+    "Sandface" : {
+        "name"      : "Bernus Sandface",
+        "alignment" : "Chaotic Good",
+        "party"     : "Democrat",
+        "funding"   : 100000
+    },
+    
+    "Trumpface" : {
+        "name"      : "Adolph Trumpface",
+        "alignment" : "Chaotic Evil",
+        "party"     : "Republican",
+        "funding"   : 100000
+    }
+}]

@@ -36,6 +36,7 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     * let, const
     * destructuring
     * arrow functions
+    * blocks
     * Object method shorthands / Concise Object Methods
     * Modules
     * Promises
@@ -193,6 +194,7 @@ Anyway, the module is written in ES5, and as I go through the new features I'll 
     * let, const
     * destructuring
     * arrow functions
+    * blocks
     * Object method shorthands / Concise Object Methods
     * Modules
     * Promises
@@ -223,6 +225,12 @@ Anyway, the module is written in ES5, and as I go through the new features I'll 
     * Q&A
     
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
+
+> When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 
+
+> By this I don’t mean that using ES6 syntax is a bad idea – quite the opposite, see I’m writing an article about ES6! My concern lies with the fact that when we adopt ES6 features we must do it because they’ll absolutely improve our code quality, and not just because of the "cool factor" – whatever that may be.
+
+> -- ponyfoo guy
 
 Don't get fatigued! Keep it simple!
 

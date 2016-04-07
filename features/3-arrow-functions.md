@@ -14,12 +14,12 @@ Example:
 ```javascript
 {
     const monsters = [
-        'frankenstein',
+        'Frankenstein',
         'the thing',
         'inventor of ...'
     ]
     
-    monsters.map( function(animal) {
+    monsters.map( function(monster) {
         return 'Help! It/'s' )+ animal;
     });
     

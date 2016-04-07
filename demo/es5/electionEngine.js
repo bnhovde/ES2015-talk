@@ -23,6 +23,6 @@ function doElection() {
 module.exports = {
     addVote: addVote,
     addFunding: addFunding,
-    addCampaign: addCampaign,
+    createCampaign: createCampaign,
     doElection: doElection
 }
