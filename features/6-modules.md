@@ -45,18 +45,13 @@ Various ways of exporting
 
     // Named Exports
     export let name = 'Bård';
-    export let age  = 30;​​
     
-    // Exporting a list of objects/functions
-    function add(a, b) {
+    export function add(a, b) {
         return a + b;
     }
-
-    function subtract(a, b) {
-        return a - b;
-    }
     
-    export { add, subtract };
+    // Exporting a list of objects/functions  
+    export { name, add };
 }
 ```
 

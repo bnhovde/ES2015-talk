@@ -12,7 +12,7 @@ Setting default parameters. Similar to destructuring.
 ```javascript
 {
     // Import entire file
-    function (a, b) {
+    function (action = 'procrastinate') {
         return a + b;
     }
     
