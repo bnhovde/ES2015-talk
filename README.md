@@ -41,13 +41,14 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     * destructuring
     * arrow functions
     * blocks
-    * Object method shorthands / Concise Object Methods
+    * Template strings
     * Modules
+    * Parameters
+    * Object method shorthands / Concise Object Methods
     * Promises
     * for of
     * Object.assign
     * Classes
-    * Template strings
     * Object literals
 * Useful patterns
     * Replacing IIFEs with Blocks
@@ -239,13 +240,14 @@ Anyway, the module is written in ES5, and as I go through the new features I'll 
     * destructuring
     * arrow functions
     * blocks
-    * Object method shorthands / Concise Object Methods
+    * Template strings
     * Modules
+    * Parameters
+    * Object method shorthands / Concise Object Methods
     * Promises
     * for of
     * Object.assign
     * Classes
-    * Template strings
     * Object literals
     
 
