@@ -10,10 +10,10 @@ Slides will be located [here](https://slides.com/bardhovde/es2015/) when complet
 ## Talk Proposal
 
 #### What is the talk about? – What will it mainly cover?
-The talk is about ES6, the new version of ECMAscript. It will cover the new features, provide tips on getting started and will also cover some ES7/ES8 features.
+The talk is about ES6, the "new" version of ECMAscript. It will cover the new features, provide tips on getting started and will also cover some ES7/ES8 features.
 
 #### Who is it for?
-The talk is for anyone interested in the current state of JavaScript in 2016. Some prior js knowledge is recommended but not required.
+The talk is for anyone interested in the current state of JavaScript in 2016. Some prior js knowledge is recommended.
 
 #### What will people (hopefully) learn from it?
 - If you use JavaScript in your daily workflow, you will hopefully see something you can take away and use in your production environment.
@@ -96,7 +96,7 @@ __
 
 Who am I, and how am I qualified to be here talking to you all? Good question.
 
-I've been a front-end developer since 2009. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
+I've been a front-end developer since 2010. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
 
 Like I said, my name is Bård. Which Is a Norwegian name, and I remember thinking before moving to the UK, what will they make of my name? Would they know any other Bårds?
 
@@ -176,7 +176,7 @@ If you adopt a new framework then you can't just pick and mix like this, so it's
 
 ### ES6/2015
 
-Okay, so where does that leave ES6?
+Okay, so ES6 has been officially "out" for close to a year now.
 
 First of all, let's clear up the naming confusion.
 
@@ -282,7 +282,7 @@ Don't get fatigued! Keep it simple!
 
 
 
-## Useful resources
+## Useful resources and sources
 
 * [Getting started with webpack and React, ES6 style](http://humaan.com/getting-started-with-webpack-and-react-es6-style/)
 * [Sugar &amp; Spice and everything nice about ES6 (Nodevember 2015)](http://benmvp.github.io/slides/nodevember2015-es6.html#/)
@@ -300,3 +300,5 @@ Don't get fatigued! Keep it simple!
 * [https://kpdecker.github.io/six-speed/](https://kpdecker.github.io/six-speed/)
 * [Welcome | ReactJS Program](http://courses.reactjsprogram.com/courses/es6forreact/lectures/816795)
 * [How to prepare and write a tech talk](http://wunder.schoenaberselten.com/2016/02/16/how-to-prepare-and-write-a-tech-conference-talk)
+* [2ality - Arrow functions](http://www.2ality.com/2012/04/arrow-functions.html)
+* [Ewan Valentine - ES6 is beautiful](http://ewanvalentine.io/es6-is-beautiful/)

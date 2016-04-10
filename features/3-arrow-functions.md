@@ -13,16 +13,21 @@ Example:
 
 ```javascript
 {
-    const monsters = [
-        'Frankenstein',
-        'the thing',
-        'inventor of ...'
-    ]
     
-    monsters.map( function(monster) {
-        return 'Help! It/'s' )+ animal;
-    });
+    const plots = [
+        'avenge dead wife',
+        'use skillset to eliminate threat to nation',
+        'save daughter'
+    ];
     
+    createMoviePitch = function(plot, actor = 'Liam Neeson') {
+        return `${actor} has to ${plot}`
+    };
+    
+    // Make it rain!
+    const boxOffice = plots.map( function(plot) {
+        return createMoviePitch(plot)
+    });   
     
 };
 ```
@@ -33,62 +38,98 @@ Example:
 
 ```javascript
 {
-    const person = {
-        name: 'Tim Samson',
-        features: {
-            face: 'round',
-            arms: 'sort',
-            hair: false
-        }
-    }
     
-
+    const plots = [
+        'avenge dead wife',
+        'use skillset to eliminate threat to nation',
+        'save daughter'
+    ];
+    
+    createMoviePitch = (plot, actor = 'Liam Neeson') => {
+        return `${actor} has to ${plot}`
+    };
+    
+    // Make it rain!
+    const boxOffice = plots.map( (plot) => {
+        return createMoviePitch(plot)
+    });   
+    
 };
 ```
 
-You can use destructuring for other things too.
-
-
-## Function parameter destructuring
-
-Useful when you only care about certain parameters
+Now, with explicit return:
 
 Example:
 
 ```javascript
 {
-    const menu = {
-        appetiser: 'flea soup'
-        mains: 'locust eggs'
-        dessert: 'goblin sorbet'
-    }
     
-    function orderDessert({dessert}){
-        console.log('Can I please have a bucket of ' + dessert + ', please?');
-    }
+    const plots = [
+        'avenge dead wife',
+        'use skillset to eliminate threat to nation',
+        'save daughter'
+    ];
     
-    orderDessert(menu); // Can I please have a bucket of goblin sorbet, please?
+    createMoviePitch = (plot, actor = 'Liam Neeson') => `${actor} has to ${plot}`;
     
+    // Make it rain!
+    const boxOffice = plots.map( plot => createMoviePitch(plot));
+
 };
 ```
 
-## Implicit return
+## Anatomy of an arrow function
 
-If one line, returns whatever on that line (no return statement needed)
+```javascript
+
+    // Passing arguments 
+    () => { ... }   // no argument
+    x => { ... } // one argument
+    (x, y) => { ... } // several arguments
+    
+    // Function bodies
+    x => { return x * x }  // block
+    x => x * x  // expression, equivalent to previous line
+```
+
+
+## Scope
+
+Arrow functions uses the same 'this' as their parent scope.
 
 Example:
 
 ```javascript
 {
-    const person = {
-        name: 'Draco',
-        age: 673
+    // ES5
+    function sneeze() {
+        
+        var self = this;
+        
+        console.log('ahh.. ahh.. ahh..');
+                
+        this.choo = function(){
+            console.log('CHOO!');
+        };
+
+        window.setTimeout( function() {
+            self.choo();
+        }, 1000);
     }
     
-    const { name = 'Ricardo', height = '180cm' } = person;
+    // ES6
+    function sneeze() {
     
-    console.log(name);      // Draco
-    console.log(height);    // 180cm
+        console.log('ahh.. ahh.. ahh..');
+                
+        this.choo = () => console.log('CHOO!');
+
+        window.setTimeout( () => {
+            this.choo();
+        }, 1000);
+    } 
+    
+
 };
 ```
 
@@ -96,3 +137,4 @@ Example:
 
 - anonymous functions 
 - one liners
+- when you need 'this' to stay in parent context

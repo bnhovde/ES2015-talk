@@ -9,53 +9,58 @@ There's a few new ways of managing parameters in ES6:
 
 Setting default parameters. Similar to destructuring.
 
+Example:
+
 ```javascript
 {
-    // Import entire file
-    function (action = 'procrastinate') {
-        return a + b;
+    const person = {
+        name: 'Draco',
+        age: 673
     }
     
-}
+    function { name = 'Ricardo', height = '180cm' } = person;
+    
+    console.log(name);      // Draco
+    console.log(height);    // 180cm
+};
 ```
 
 
-## Exporting:
+## Rest Parameters:
 
-Various ways of exporting
+Turns argumets into an array
 
 ```javascript
 {
-
-    // Named Exports
-    export let name = 'Bård';
-    
-    export function add(a, b) {
-        return a + b;
+    // ES5
+    function logEach() {
+        var things = Array.prototype.slice.call(arguments);
+        things.forEach(function (thing) {
+            console.log(thing);
+        });
     }
-    
-    // Exporting a list of objects/functions  
-    export { name, add };
-}
-```
-
-
-
-## Best Practice:
-
-Exports go at the bottom of the file
-
-```javascript
-{
-
-    // Named Exports
-    console.log('string text line 1\n\ string text line 2');
+    logEach("a", "b", "c");
     
     // ES6
-    console.log(
-        `string text line 1
-        string text line 2`
-    );  
+    function logEach(...things) {
+        things.forEach(function (thing) {
+            console.log(thing);
+        });
+    }
+    logEach("a", "b", "c");
+    
+}
+```
+
+
+
+## Spread Practice:
+
+
+
+```javascript
+{
+
 }
 ```
 
@@ -65,4 +70,4 @@ Exports go at the bottom of the file
 
 For future projects:
 
-- Module dependencies
+- 

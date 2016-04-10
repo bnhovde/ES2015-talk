@@ -101,10 +101,27 @@ Example:
     const { name = 'Ricardo', height = '180cm' } = person;
     
     console.log(name);      // Draco
+    console.log(age);       // 673
     console.log(height);    // 180cm
 };
 ```
 
+## Variable unpacking
+
+Common in react
+
+Example:
+
+```javascript
+{
+    // ES5
+    var author = this.props.author;
+    var bio = this.props.bio;
+        
+    // ES6
+    const { author, bio } = this.props;  
+};
+```
 
 ## Use case: 
 
