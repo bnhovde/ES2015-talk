@@ -80,6 +80,9 @@ My name is Bård, I’m a Front-End Developer working at CDD, we’re a small di
 
 I’m gonna be talking primarily about ES6 today. About the "new" features and how to put them into practice and benefit from them.
 
+> Q: How many of you are using ES6 today?
+> Q: And how many of you are 
+
 I'll also touch on ES7 and even 8 if there’s time.
 
 My goal here today is that you all go away knowing more than you do now, maybe see something you like and can take and put into your product or hobby project.
@@ -98,11 +101,11 @@ Who am I, and how am I qualified to be here talking to you all? Good question.
 
 I've been a front-end developer since 2010. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
 
-Like I said, my name is Bård. Which Is a Norwegian name, and I remember thinking before moving to the UK, what will they make of my name? Would they know any other Bårds?
+Like I said, my name is Bård. That's a fairly common Norwegian name, and I remember thinking before moving to the UK, what will they make of my name? Would they know any other Bårds?
 
 Turns out that.. No, I'm the only one.
 
-Then a few years later I found out that you can just pick an english name that sounds like yours and I was furious
+Then a few years later I found out that you can just pick an english name that sounds like yours and I was furious.
 
 On the plus side though, if you ever hear someone talk about some weird foreign guy named bart or board or something.. That's me! There is no way that's anyone else!
 
@@ -114,9 +117,11 @@ __
     * JavaScript in 2016
     * ES6/2015
     * browser support
-    * Babel   
+    * Babel
     
-This is the agenda. I'm first gonna talk about the state of JavaScript in 2016. 
+> [Agenda]
+    
+This is the agenda. I'm first gonna talk about the state of JavaScript in 2016.
 
 The biggest part of the talk will be going through the new features. 
 
@@ -126,12 +131,15 @@ There's a lot of them, so I'll primarily focus on the ones that will most likely
 
 Before I go through the features I'll show you a JavaScript library I've written without ES6, and as I tick off the features I'll implement these into the ES5 library to demonstrate use cases.
 
-When I was writing this talk I realized there's so much material here. 
+When I was writing this talk I realized there's so much material here. How am I going to keep you focused through all of this material? I mean, I think it's pretty riveting stuff, but I would probably be drifting off too after 30 minutes of theory, so I've tried to spice it up a little..
 
-[quiz slide]
+Sprinkled in with the rest of the slides I've added "Surprise quiz slides". When one of those pop up, the first person to shout the answer wins some candy. The questions aren't javaScript related, and you're allowed to google or bing or whatever you want to do.
 
-First I'd like to set the stage a little.
+Let's try one out now. Ready?
 
+> [quiz slide]
+
+All right then. Let's get on with the talk.
 
 ### JavaScript in 2016
 
@@ -198,6 +206,14 @@ This is good for a few reasons:
 
 I think adoption of ES6 has been slow but steady. This is probably partly because the browser support has only just caught up, but probaby also due to all the other things that are going on in the 
 
+#### "Syntactical sugar"
+
+I've seen a lot of comments on how many of the ES6 features are "Syntactical sugar" on top of ES5.
+
+Coffeescript, which by the way we owe a lot of ES6's refinements to, is also "sugar".
+
+What's wrong with sugar? If the end goal is Readable code and a better developer experience, then sugar is good!
+
 
 ### browser support
 
@@ -210,15 +226,36 @@ That's okay though, we've got babel.
 
 ### Babel
 
+How many of you are using babel
+
 Babel transpiles modern js features into ES5. How does it work? Magic..
 
-If you're worried about transpiling...
+This allows you to use the ES6, 7 and 8 features you want today. 
+
+> Q: How many of you use babel today?
+> Q: How many of you have some kind of build step for your javascript? Minification? Linting etc? 
+
+If you're a little worried about transpiling, I hear you.
+
+My biggest worry when I added transpiling to my build step was debugging. I use the chrome debugger all the time, and the last thing I wanted was for that experience to change. Luckily, with babel and source maps, the debugging experience doesn't change that much. Although the code output is different to the input, it's still very similar, and the debugger works. 
+
+I've been using ES6 through babel for every project I could for the last year or so, and although I've experienced certain bugs there's been no deal breakers.
+
+Is it worth the hassle? The overall developer experience I feel is better. My code is smaller, mostly due to the syntactical sugar we talked about.
+
+> !demo babel
 
 #### Stages
 
 Now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
 
+> !babel stages
+
 External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
+
+Each ecmascript feature has to go through several stages before it makes it into the spec. As you can see, each feature has a champion responsible for pushing it through.
+
+With babel you can enable the stages you want, even stage 0 features.
 
 [Quiz Slide]
 
