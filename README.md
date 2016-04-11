@@ -6,6 +6,7 @@ Contains rough notes for a possible transcript + source code for demo & examples
 
 Slides will be located [here](https://slides.com/bardhovde/es2015/) when completed.
 
+__
 
 ## Talk Proposal
 
@@ -23,6 +24,7 @@ The talk is for anyone interested in the current state of JavaScript in 2016. So
 #### What’s unique about this talk?, or: Why should I watch it?
 I'll try to cover the material in an intuitive way. I won't go too deep, but deep enough to show how it's all connected. Hopefully I'll give you a broad understanding of the JavaScript ecosystem as a whole.
 
+__
 
 ## Outline
 
@@ -31,10 +33,10 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     * About the talk
     * Goals for the talk
 * Agenda
-    * JavaScript in 2016
-    * ES6/2015
-    * browser support
-    * Babel   
+* JavaScript in 2016
+* ES6/2015
+* browser support
+* Babel   
 * Approach
 * New features
     * let, const
@@ -60,6 +62,7 @@ I'll try to cover the material in an intuitive way. I won't go too deep, but dee
     * CTA's
     * Q&A
 
+______
 
 ## Transcript
 
@@ -81,7 +84,7 @@ My name is Bård, I’m a Front-End Developer working at CDD, we’re a small di
 I’m gonna be talking primarily about ES6 today. About the "new" features and how to put them into practice and benefit from them.
 
 > Q: How many of you are using ES6 today?
-> Q: And how many of you are 
+> Q: And how many of you are ...
 
 I'll also touch on ES7 and even 8 if there’s time.
 
@@ -110,12 +113,13 @@ Then a few years later I found out that you can just pick an english name that s
 On the plus side though, if you ever hear someone talk about some weird foreign guy named bart or board or something.. That's me! There is no way that's anyone else!
 
 Anyway, that's plenty about me I think. Let's get to it.
-__
+
+______
 
 ## Agenda
 
     * JavaScript in 2016
-    * ES6/2015
+    * ES6
     * browser support
     * Babel
     
@@ -123,7 +127,7 @@ __
     
 This is the agenda. I'm first gonna talk about the state of JavaScript in 2016.
 
-The biggest part of the talk will be going through the new features. 
+The biggest part of the talk will be going through ES6 and the new features. 
 
 > [list of features]
 
@@ -141,7 +145,9 @@ Let's try one out now. Ready?
 
 All right then. Let's get on with the talk.
 
-### JavaScript in 2016
+______
+
+## JavaScript in 2016
 
 The JavaScript ecosystem in 2016 is a pretty chaotic place. There's lots of articles written on this. You've probably heard phrases like "JavaScript fatigue" or "tooling fatigue" being used, and rightly so.
 
@@ -181,12 +187,13 @@ If you adopt a new framework then you can't just pick and mix like this, so it's
 
 ...
 
+______
 
-### ES6/2015
+## ES6/2015
 
 Okay, so ES6 has been officially "out" for close to a year now.
 
-First of all, let's clear up the naming confusion.
+In case you're confused about the naming conventions:
 
 > [... ES5, ES6 || ES2015, ES2016, ES2017, ...]
 
@@ -204,9 +211,28 @@ This is good for a few reasons:
 - Browsers should adopt faster
 - Once you're on top of ES6, then hopefully future releases will seem less daunting.
 
-I think adoption of ES6 has been slow but steady. This is probably partly because the browser support has only just caught up, but probaby also due to all the other things that are going on in the 
+__
 
-#### "Syntactical sugar"
+### Stages
+
+I think now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
+
+> !babel stages
+
+External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
+
+Each ecmascript feature has to go through several stages before it makes it into the spec. As you can see, each feature has a champion responsible for pushing it through.
+
+With the new yearly releace cycle, features that has made it to stage 3 will be included in the release that year, which is a good way of doing it.
+
+I remember reading this blog post called idomatic es6 with a great section on what happens when a new version of javaScript is released: 
+
+> In April, the ES6 spec reached its final draft. Later this month, the Grand Council of Javascript Elders will shuffle into the silver sanctum to seal the document with unicorn wax. A glass bell will ring in the spire of the tallest tower in the City and leprechauns will be dispatched to carry the good news to the farthest corners of the Kingdom. ‘ES5 is dead, long live ES6!’ they shout.
+
+[Quiz Slide]
+__
+
+### "Syntactical sugar"
 
 I've seen a lot of comments on how many of the ES6 features are "Syntactical sugar" on top of ES5.
 
@@ -214,6 +240,7 @@ Coffeescript, which by the way we owe a lot of ES6's refinements to, is also "su
 
 What's wrong with sugar? If the end goal is Readable code and a better developer experience, then sugar is good!
 
+__
 
 ### browser support
 
@@ -224,7 +251,10 @@ External link: [http://kangax.github.io/compat-table/es6](http://kangax.github.i
 
 That's okay though, we've got babel.
 
-### Babel
+
+______
+
+## Babel
 
 How many of you are using babel
 
@@ -243,21 +273,11 @@ I've been using ES6 through babel for every project I could for the last year or
 
 Is it worth the hassle? The overall developer experience I feel is better. My code is smaller, mostly due to the syntactical sugar we talked about.
 
-> !demo babel
-
-#### Stages
-
-Now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
-
-> !babel stages
-
-External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
-
-Each ecmascript feature has to go through several stages before it makes it into the spec. As you can see, each feature has a champion responsible for pushing it through.
+> !demo babel - point out stages
 
 With babel you can enable the stages you want, even stage 0 features.
 
-[Quiz Slide]
+______
 
 ## Approach
 
@@ -265,9 +285,11 @@ With babel you can enable the stages you want, even stage 0 features.
 
 I've created a simple app that simulates the americal election system. I know you're not supposed to mix politics and tech talks, but this is a fictional election. Any resemblence to real people is absolutely coincidental.
 
-Anyway, the module is written in ES5, and as I go through the new features I'll dive in and update the app to use these.
+Anyway, like I said earlier, the module is written in ES5, and as I go through the new features I'll dive in and update the app to use the new features.
 
 (TIME: 30)
+
+______
 
 ## New features
 
@@ -290,17 +312,26 @@ Anyway, the module is written in ES5, and as I go through the new features I'll 
 
 (TIME: 60)
 
+______
+
+
 ## Useful patterns
 
+    * Functional
+
+______
 
 ## 3rd party libraries?
 
+
+______
 
 ## ES7/2016 and beyond
 
     * Observables
     * Async await (ES8/2017)
     
+______
     
 ## Final thoughts
 
@@ -308,6 +339,8 @@ Anyway, the module is written in ES5, and as I go through the new features I'll 
     * Q&A
     
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
+
+Words of caution:
 
 > When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 
 
@@ -317,7 +350,7 @@ Is it worth it? I think so. This is the new js, and less code is better. Less ro
 
 Don't get fatigued! Keep it simple!
 
-
+______
 
 ## Useful resources and sources
 
