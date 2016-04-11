@@ -92,7 +92,9 @@ function(){
 
 ## Best Practice: 
 
-Don't blindly refactor all var instances as this can create side effects. 
+"const is the new var."
+
+But: don't blindly refactor all var instances as this can create side effects. 
 
 
 ## Use case: 

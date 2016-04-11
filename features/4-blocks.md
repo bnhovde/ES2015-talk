@@ -1,8 +1,13 @@
 
 # blocks
 
+"the End of the IIFE"
 
-A common use of `Immediately Invoked Function Expressions` is to enclose values within its scope. 
+A common complaints of Javascript has been the lack of block scoping.
+
+A common workaround is `Immediately Invoked Function Expressions` used to enclose values within its scope. 
+
+> [Slide: IIFE]
 
 In ES6, we now have the ability to create block-based scopes and therefore are not limited purely to function-based scope.
 
@@ -27,6 +32,11 @@ In ES6, we now have the ability to create block-based scopes and therefore are n
 ## Hoisting: 
 
 http://www.sitepoint.com/joys-block-scoping-es6/
+
+
+> [Slide: https://twitter.com/BrendanEich/status/349768501583548416]
+
+Source: [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
 
 
 ## Use case: 

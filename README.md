@@ -372,3 +372,4 @@ ______
 * [How to prepare and write a tech talk](http://wunder.schoenaberselten.com/2016/02/16/how-to-prepare-and-write-a-tech-conference-talk)
 * [2ality - Arrow functions](http://www.2ality.com/2012/04/arrow-functions.html)
 * [Ewan Valentine - ES6 is beautiful](http://ewanvalentine.io/es6-is-beautiful/)
+* [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
