@@ -2,6 +2,10 @@
 # let, const
 
 
+Hoisting is a well known oddity of javaScript. It's something we've gotten used to, but I think not one developer can say they haven't ever been tripped up by hoisting.
+
+[Slide: Hoisting]
+
 `let` and `const` are new variable declaration statements.
 
 They both declare a block scope local variable, as opposed to var which is function scoped.
@@ -20,9 +24,9 @@ The only difference between const and let is that const makes the contract that 
         console.log(letName);   // Donna
         console.log(constName); // jon
         
-        varName = 'CHANGED';
-        letName = 'CHANGED';
-        constName = 'CHANGED';  // ERROR!
+        var Name = 'CHANGED';
+        let Name = 'CHANGED';
+        const Name = 'CHANGED'; // ERROR!
             
     }
     
@@ -63,9 +67,7 @@ Example:
 ## const
 
 - `const` means that the variable can’t be reassigned
-
 - `const` does not make a variable immutable
-
 - `const` represents a constant reference to a value
 
 Example:
@@ -94,7 +96,7 @@ function(){
 
 "const is the new var."
 
-But: don't blindly refactor all var instances as this can create side effects. 
+But: don't blindly refactor all var instances as this can create side effects. (hoisting)
 
 
 ## Use case: 

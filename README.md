@@ -154,21 +154,24 @@ The JavaScript ecosystem in 2016 is a pretty chaotic place. There's lots of arti
 
 If you've tried setting up a modern js JavaScript stack from scratch in the last year you've probably felt some of this pain. Have a look at this. 
 
-[slide showing folder] 
+[> slide showing folder] 
 
 This is the root folder of a very popular Redux/React "starter kit".
 
 The amount of config and dotfiles are staggering. What do they all do? If you're just starting out with JavaScript in 2016 you're in for a rough start.
 
+> [slide: https://twitter.com/iamdevloper/status/702464176954875904]
+
+
 I remember starting out learning react and setting up a pretty basic ...
 
 So what else has happened in 2016? 
 
-[slide: bower]
+> [slide: bower]
 
 Bower has died. Well, kind of. The Angular team has announced that Angular 2 will be distributed through npm, so there'll be no official bower package for Angular 2.
 
-[slide: npm]
+> [slide: npm]
 
 Then there was the recent npm incident that sparked a shitstorm. 
 
@@ -176,7 +179,7 @@ If you missed that one, there was some dispute over a package name on npm.
 
 We don't want to go back to having one monolithic library doing everything like jQuery, but we also don't want our library to rely on 200 000 modules. I think we'll end up somewhere in the middle.
 
-Pendulum..
+> [Slide: https://twitter.com/iamdevloper/status/712574452697989120]
 
 What we got out of it was a better unpublishing rules from npm.
 
@@ -194,11 +197,31 @@ ______
 
 Okay, so ES6 has been officially "out" for close to a year now.
 
-In case you're confused about the naming conventions:
+There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next Harmony.. I'd like to attempt to clear this up, hopefully this won't just confuse you more.
 
-> [... ES5, ES6 || ES2015, ES2016, ES2017, ...]
+> [Slide: names]
 
-They're the same thing, with the old and the new naming conventions
+* ECMA - international standard body, adopted the API
+* ECMAScript - ECMA's official API
+* javaScript - One implementation of ECMAscript
+* VBScript - Another implementation of ECMAscript
+* JScript - Another implementation of ECMAscript
+* ActionScript - Another implementation of ECMAscript
+* LiveScript - First name of js, before Sun got involved and renamed it to javaScript.(Somewhat of a marketing move at the time, with Java being very popular around then)
+* Harmony
+* TC39 - committee put together by ECMA to progress in the language (technical committee number 39).
+* ES.next - when the committee’s working on the next API, this is what they call it
+* ES2015 - Released in June 2015. First release for 6 years. 
+* ES2016 - Upcoming release
+* ES2017 - Upcoming release
+* ES2 - ECMAScript version 2 (1998)
+* ES3 - ECMAScript version 3 (1999)
+* ES4 - Never saw the light of day
+* ES5 - ECMAScript version 5 (2009)
+* ES6 - Released in June 2015. First release for 6 years.
+* ES7 - No such thing. See ES2016.
+* ES8 - No such thing. See ES2017.
+
 
 The ES6 spec was finalised by the TC39 committee in June 2015, after 6 years or work.
 
@@ -218,7 +241,7 @@ __
 
 I think now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
 
-> !babel stages
+> !stages
 
 External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
 
@@ -230,7 +253,7 @@ I remember reading this blog post called idomatic es6 with a great section on wh
 
 > In April, the ES6 spec reached its final draft. Later this month, the Grand Council of Javascript Elders will shuffle into the silver sanctum to seal the document with unicorn wax. A glass bell will ring in the spire of the tallest tower in the City and leprechauns will be dispatched to carry the good news to the farthest corners of the Kingdom. ‘ES5 is dead, long live ES6!’ they shout.
 
-[Quiz Slide]
+> [Quiz Slide]
 __
 
 ### "Syntactical sugar"
@@ -240,6 +263,10 @@ I've seen a lot of comments on how many of the ES6 features are "Syntactical sug
 Coffeescript, which by the way we owe a lot of ES6's refinements to, is also "sugar".
 
 What's wrong with sugar? If the end goal is Readable code and a better developer experience, then sugar is good!
+
+I want less cognitive load when I look at some code. As I'll show you when I go through the features the amount of code needed to do the same thing in ES5 and ES6 is quite staggering.
+
+With ES6, things like default parameters and destructuring will eliminate the need for a lot of the "boilerplate" code we write with each module or function.
 
 __
 
@@ -256,8 +283,6 @@ That's okay though, we've got babel.
 ______
 
 ## Babel
-
-How many of you are using babel
 
 Babel transpiles modern js features into ES5. How does it work? Magic..
 
@@ -277,6 +302,10 @@ Is it worth the hassle? The overall developer experience I feel is better. My co
 > !demo babel - point out stages
 
 With babel you can enable the stages you want, even stage 0 features.
+
+> !demo .babelrc
+
+Configuring babel is done through the babelrc file. Yep, another config file.
 
 ______
 
@@ -374,4 +403,4 @@ ______
 * [2ality - Arrow functions](http://www.2ality.com/2012/04/arrow-functions.html)
 * [Ewan Valentine - ES6 is beautiful](http://ewanvalentine.io/es6-is-beautiful/)
 * [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
-* [Luke Hoban - ES6 features](https://github.com/lukehoban/es6features)
+* [Mikael Brevik - Destructuring presentation](http://git.mikaelb.net/presentations/bartjs/destructuring)

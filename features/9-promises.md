@@ -1,9 +1,12 @@
 
-# Object method shorthands / Concise Object Methods
+# Promises
 
 
-Template strings allow you to mix strings, variables and functions.
+Promises are perhaps the most important new feature.
 
+- Lots of 3rd party libraries do this already
+- Finally a native implementation
+- Used under the hood for a lot of async features
 
 ```javascript
 {

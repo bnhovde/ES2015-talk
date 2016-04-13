@@ -59,6 +59,11 @@ Example:
 };
 ```
 
+In other languages: 
+
+    - PHP: listing
+    - Ruby: parallel assigning
+
 You can use destructuring for other things too.
 
 
