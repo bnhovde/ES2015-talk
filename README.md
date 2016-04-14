@@ -286,12 +286,15 @@ ______
 
 ## Babel
 
-Babel transpiles modern js features into ES5. How does it work? Magic..
-
-This allows you to use the ES6, 7 and 8 features you want today. 
-
 > Q: How many of you use babel today?
 > Q: How many of you have some kind of build step for your javascript? Minification? Linting etc? 
+
+Babel transpiles modern js features into ES5. How does it work? Magic..
+
+- Some features are transpiled to ES5 via syntax transformers
+- More complex features are polyfilled with `babel-polyfill`
+
+This allows you to use the ES6, 7 and 8 features you want today. 
 
 If you're a little worried about transpiling, I hear you.
 
