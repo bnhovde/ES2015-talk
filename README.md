@@ -35,7 +35,9 @@ __
 * Agenda
 * JavaScript in 2016
 * ES6/2015
-* browser support
+    * Stages
+    * Sugar
+    * browser support
 * Babel   
 * Approach
 * New features
@@ -51,10 +53,12 @@ __
     * for of
     * Object.assign
     * Classes
-    * Object literals
+    * Enhanced object literals
+    * Generators (basics)
+
 * Useful patterns
     * Replacing IIFEs with Blocks
-* 3rd party libraries?
+* Updating your workflow
 * ES7/2016 and beyond
     * Observables
     * Async await (ES8/2017)
@@ -86,11 +90,11 @@ I’m gonna be talking primarily about ES6 today. About the "new" features and h
 > Q: How many of you are using ES6 today?
 > Q: And how many of you are ...
 
-I'll also touch on ES7 and even 8 if there’s time.
-
-My goal here today is that you all go away knowing more than you do now, maybe see something you like and can take and put into your product or hobby project.
+My goal here today is that you all go away knowing more about ES6 than you do now, maybe see a couple of features you like and can take and put into your product or hobby project.
 
 I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
+
+I'll also touch on ES7 and other upcoming features if there's time.
 
 Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
 
@@ -100,9 +104,11 @@ __
 
 ### About me
 
+> [About me]
+
 Who am I, and how am I qualified to be here talking to you all? Good question.
 
-I've been a front-end developer since 2010. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
+I've been a front-end developer since around 2010. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
 
 Like I said, my name is Bård. That's a fairly common Norwegian name, and I remember thinking before moving to the UK, what will they make of my name? Would they know any other Bårds?
 
@@ -118,11 +124,6 @@ ______
 
 ## Agenda
 
-    * JavaScript in 2016
-    * ES6
-    * browser support
-    * Babel
-    
 > [Agenda]
     
 This is the agenda. I'm first gonna talk about the state of JavaScript in 2016.
@@ -246,7 +247,7 @@ External link: [ecmascript stages](https://github.com/tc39/ecma262#ecmascript)
 
 Each ecmascript feature has to go through several stages before it makes it into the spec. As you can see, each feature has a champion responsible for pushing it through.
 
-With the new yearly releace cycle, features that has made it to stage 3 will be included in the release that year, which is a good way of doing it.
+With the new yearly releace cycle, features that has made it to stage 4 will be included in the release that year, which is a good way of doing it.
 
 I remember reading this blog post called idomatic es6 with a great section on what happens when a new version of javaScript is released: 
 
