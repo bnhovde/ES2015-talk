@@ -273,6 +273,8 @@ __
 
 Browser support for es6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
 
+nodejs
+
 External link: [http://kangax.github.io/compat-table/es6](http://kangax.github.io/compat-table/es6)
 
 
