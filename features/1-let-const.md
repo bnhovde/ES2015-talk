@@ -23,11 +23,11 @@ Example: Scope 1
     if (true){
         
         console.log(varName);   // Angus
-        console.log(letName);   // Donna
-        console.log(constName); // jon
+        console.log(letName);   // ReferenceError
+        console.log(constName); // ReferenceError
         
-        var varName = 'CHANGED'; // same variable
-        let letName = 'CHANGED'; // new variable
+        var varName = 'CHANGED';
+        let letName = 'CHANGED';
         const constName = 'CHANGED'; // ERROR!
             
     }
