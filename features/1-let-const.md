@@ -8,9 +8,11 @@ Hoisting is a well known oddity of javaScript. It's something we've gotten used 
 
 `let` and `const` are new variable declaration statements.
 
-They both declare a block scope local variable, as opposed to var which is function scoped.
+They both declare a block scope local variable, as opposed to `var` which is function scoped.
 
-The only difference between const and let is that const makes the contract that no rebinding will happen.
+The only difference between `const` and `let` is that `const` makes the contract that no rebinding will happen.
+
+Example: Scope 1
 
 ```javascript
 {
@@ -24,9 +26,35 @@ The only difference between const and let is that const makes the contract that 
         console.log(letName);   // Donna
         console.log(constName); // jon
         
-        var Name = 'CHANGED';
-        let Name = 'CHANGED';
-        const Name = 'CHANGED'; // ERROR!
+        var varName = 'CHANGED'; // same variable
+        let letName = 'CHANGED'; // new variable
+        const constName = 'CHANGED'; // ERROR!
+            
+    }
+    
+    console.log(varName);   // CHANGED
+    console.log(letName);   // Donna
+    console.log(constName); // jon
+};
+```
+
+Example: Scope 2
+
+```javascript
+{
+    var varName = 'Angus';
+    let letName = 'Donna';
+    const constName = 'jon';
+    
+    if (true){
+        
+        console.log(varName);   // Angus
+        console.log(letName);   // Donna
+        console.log(constName); // jon
+        
+        var varName = 'CHANGED';
+        let letName = 'CHANGED';
+        const constName = 'CHANGED'; // ERROR!
             
     }
     
