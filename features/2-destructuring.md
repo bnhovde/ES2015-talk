@@ -12,6 +12,8 @@ Example:
 
 ```javascript
 {
+    // ES5 object creation
+    
     const person = {
         name: 'Tim Samson',
         features: {
@@ -47,7 +49,7 @@ Example:
         }
     }
     
-    // To get values out, you got to dig!
+    // To get values out with ES5 you had to dig!
     const name = person.name;
     const face = person.features.face;
     const arms = person.features.arms;
@@ -69,12 +71,11 @@ You can use destructuring for other things too.
 
 ## Function parameter destructuring
 
-Useful when you only care about certain parameters
-
 Example:
 
 ```javascript
 {
+    // Useful when you only care about certain parameters
     const menu = {
         appetiser: 'flea soup'
         mains: 'locust eggs'
@@ -121,10 +122,11 @@ Example:
 {
     // ES5
     var author = this.props.author;
+    var posts = this.props.posts;
     var bio = this.props.bio;
         
     // ES6
-    const { author, bio } = this.props;  
+    const { author, posts, bio } = this.props;  
 };
 ```
 

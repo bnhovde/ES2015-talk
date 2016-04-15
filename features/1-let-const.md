@@ -16,25 +16,27 @@ Example: Scope 1
 
 ```javascript
 {
+    // var, let and const are available in all sub-blocks
+    
     var varName = 'Angus';
-    let letName = 'Donna';
-    const constName = 'jon';
+    let letName = 'Angus';
+    const constName = 'Angus';
     
     if (true){
         
         console.log(varName);   // Angus
-        console.log(letName);   // ReferenceError
-        console.log(constName); // ReferenceError
+        console.log(letName);   // Angus
+        console.log(constName); // Angus
         
-        var varName = 'CHANGED';
-        let letName = 'CHANGED';
-        const constName = 'CHANGED'; // ERROR!
+        varName = 'Donna';
+        letName = 'Donna';
+        constName = 'Donna'; // ERROR!
             
     }
     
-    console.log(varName);   // CHANGED
+    console.log(varName);   // Donna
     console.log(letName);   // Donna
-    console.log(constName); // jon
+    console.log(constName); // Angus
 };
 ```
 
@@ -42,32 +44,25 @@ Example: Scope 2
 
 ```javascript
 {
-    var varName = 'Angus';
-    let letName = 'Donna';
-    const constName = 'jon';
+    // But only var is available outside of block scope
     
     if (true){
-        
-        console.log(varName);   // Angus
-        console.log(letName);   // Donna
-        console.log(constName); // jon
-        
-        var varName = 'CHANGED';
-        let letName = 'CHANGED';
-        const constName = 'CHANGED'; // ERROR!
+
+        var varName = 'Angus';
+        let letName = 'Angus';
+        const constName = 'Angus';
             
     }
     
-    console.log(varName);   // CHANGED
-    console.log(letName);   // CHANGED
-    console.log(constName); // jon
+    console.log(varName);   // Angus
+    console.log(letName);   // letName is not defined
+    console.log(constName); // constName is not defined
 };
 ```
 
 ## let
 
 While `var` creates a variable scoped within its nearest parent function, `let` scopes the variable to the nearest block, this includes for loops, if statements, and others.
-
 
 Example:
 
@@ -124,7 +119,7 @@ function(){
 
 "const is the new var."
 
-But: don't blindly refactor all var instances as this can create side effects. (hoisting)
+But: Don't blindly refactor all var instances as this can create side effects. (hoisting)
 
 
 ## Use case: 
