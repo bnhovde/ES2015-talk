@@ -372,6 +372,13 @@ ______
     
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
 
+Simple benefits:
+
+- A great deal less boilerplate = less code = less room for error
+- No more `self = this` (arrows)
+- Less data validation in functions (default parameters)
+- 
+
 Words of caution:
 
 > When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 

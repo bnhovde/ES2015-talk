@@ -13,11 +13,15 @@ In ES6, we now have the ability to create block-based scopes and therefore are n
 
 ```javascript
 {
+    // ES5
+    
     (function () {
         var secret = 'Soylent green is people!';
     }());
     
     console.log(secret); // Reference Error
+    
+    // ES6
     
     {
         let secret = 'Bush faked the moon landing';

@@ -83,7 +83,7 @@ Example:
     }
     
     function orderDessert({dessert}){
-        console.log('Can I please have a bucket of ' + dessert + ', please?');
+        console.log(`Can I please have a bucket of ${dessert}, please?`);
     }
     
     orderDessert(menu); // Can I please have a bucket of goblin sorbet, please?

@@ -13,6 +13,7 @@ Example:
 
 ```javascript
 {
+    // ES5 - Movie plot generator
     
     const plots = [
         'avenge dead wife',
@@ -20,14 +21,14 @@ Example:
         'save daughter'
     ];
     
-    createMoviePitch = function(plot, actor = 'Liam Neeson') {
-        return `${actor} has to ${plot}`
+    const createMoviePitch = function(plot, actor = 'Liam Neeson') {
+        console.log(`${actor} has to ${plot}`);
     };
     
     // Make it rain!
-    const boxOffice = plots.map( function(plot) {
+    plots.map( function(plot) {
         return createMoviePitch(plot)
-    });   
+    });
     
 };
 ```
@@ -39,25 +40,29 @@ Example:
 ```javascript
 {
     
+    // ES6 - Movie plot generator
+    
     const plots = [
         'avenge dead wife',
         'use skillset to eliminate threat to nation',
         'save daughter'
     ];
     
-    createMoviePitch = (plot, actor = 'Liam Neeson') => {
-        return `${actor} has to ${plot}`
+    const createMoviePitch = function(plot, actor = 'Liam Neeson') {
+        console.log(`${actor} has to ${plot}`);
     };
     
     // Make it rain!
-    const boxOffice = plots.map( (plot) => {
+    plots.map( (plot) => {
         return createMoviePitch(plot)
-    });   
+    });
     
 };
 ```
 
 Now, with explicit return:
+
+An arrow function will explicitly return single-line statements
 
 Example:
 
@@ -70,10 +75,17 @@ Example:
         'save daughter'
     ];
     
-    createMoviePitch = (plot, actor = 'Liam Neeson') => `${actor} has to ${plot}`;
+    const createMoviePitch = (plot, actor = 'Liam Neeson') => {
+        console.log(`${actor} has to ${plot}`);
+    }
     
     // Make it rain!
-    const boxOffice = plots.map( plot => createMoviePitch(plot));
+    plots.map( plot => createMoviePitch(plot));
+    
+    // Same as:
+    plots.map( (plot) => {
+        return createMoviePitch(plot)
+    });
 
 };
 ```
