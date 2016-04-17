@@ -9,7 +9,32 @@ The main differences between regular old functions and arrow functions are:
 - Drop the "function" keyword
 - Arrow functions doesn't create a new 'this' context.
 
-Example:
+Basic Example:
+
+```javascript
+{
+    // ES5 function
+    const person = {
+        greet: function(name) {
+            return `hi, ${name}`;
+        }
+    }
+    
+    // Arrow function
+    const person = {
+        greet: (name) => {
+            return `hi, ${name}`;
+        }
+    }
+    
+    // Implicit return
+    const person = {
+        greet: (name) => `hi, ${name}`
+    }
+};
+```
+
+Practical Example:
 
 ```javascript
 {
@@ -21,8 +46,8 @@ Example:
         'save daughter'
     ];
     
-    const createMoviePitch = function(plot, actor = 'Liam Neeson') {
-        console.log(`${actor} has to ${plot}`);
+    const createMoviePitch = function(plot) {
+        console.log(`Liam Neeson has to ${plot}`);
     };
     
     // Make it rain!
@@ -35,7 +60,7 @@ Example:
 
 Now, with arrow functions:
 
-Example:
+Practical Example:
 
 ```javascript
 {
@@ -48,15 +73,14 @@ Example:
         'save daughter'
     ];
     
-    const createMoviePitch = function(plot, actor = 'Liam Neeson') {
-        console.log(`${actor} has to ${plot}`);
+    const createMoviePitch = function(plot) {
+        console.log(`Liam Neeson has to ${plot}`);
     };
     
     // Make it rain!
     plots.map( (plot) => {
         return createMoviePitch(plot)
     });
-    
 };
 ```
 
@@ -64,7 +88,7 @@ Now, with explicit return:
 
 An arrow function will explicitly return single-line statements
 
-Example:
+Practical Example:
 
 ```javascript
 {

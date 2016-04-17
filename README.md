@@ -201,13 +201,13 @@ There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next 
 
 > [Slide: names]
 
+* LiveScript - First name of js, before Sun got involved and renamed it to javaScript.(Somewhat of a marketing move at the time, with Java being very popular around then)
 * ECMA - international standard body, adopted the API
 * ECMAScript - ECMA's official API
 * javaScript - One implementation of ECMAscript
 * VBScript - Another implementation of ECMAscript
 * JScript - Another implementation of ECMAscript
 * ActionScript - Another implementation of ECMAscript
-* LiveScript - First name of js, before Sun got involved and renamed it to javaScript.(Somewhat of a marketing move at the time, with Java being very popular around then)
 * Harmony
 * TC39 - committee put together by ECMA to progress in the language (technical committee number 39).
 * ES.next - when the committee’s working on the next API, this is what they call it
@@ -413,3 +413,8 @@ ______
 * [Ewan Valentine - ES6 is beautiful](http://ewanvalentine.io/es6-is-beautiful/)
 * [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
 * [Mikael Brevik - Destructuring presentation](http://git.mikaelb.net/presentations/bartjs/destructuring)
+
+
+## Credits
+
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

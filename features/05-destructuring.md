@@ -1,6 +1,7 @@
 
 # destructuring
 
+Used to extract values from data stored in objects and Arrays.
 
 Imagine javaScript without JSON, having to set key values on objects.
 
@@ -12,7 +13,7 @@ Example:
 
 ```javascript
 {
-    // ES5 object creation
+    // ES5 object construction
     
     const person = {
         name: 'Tim Samson',
@@ -49,7 +50,7 @@ Example:
         }
     }
     
-    // To get values out with ES5 you had to dig!
+    // To extract values out with ES5 you had to dig!
     const name = person.name;
     const face = person.features.face;
     const arms = person.features.arms;
@@ -76,6 +77,7 @@ Example:
 ```javascript
 {
     // Useful when you only care about certain parameters
+    
     const menu = {
         appetiser: 'flea soup'
         mains: 'locust eggs'
@@ -93,12 +95,13 @@ Example:
 
 ## Default values
 
-Provide a fallback value if property doesn't exist
 
 Example:
 
 ```javascript
 {
+    // Provide a fallback value if property doesn't exist
+    
     const person = {
         name: 'Draco',
         age: 673
@@ -120,6 +123,8 @@ Example:
 
 ```javascript
 {
+    // Variable unpacking - common react pattern
+    
     // ES5
     var author = this.props.author;
     var posts = this.props.posts;

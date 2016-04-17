@@ -11,6 +11,10 @@ Example:
     function add(x=0, y=0) {
         return x + y;
     }
+    
+    add(); // 0
+    add(1); // 1
+    add(2, 3); // 5
 };
 ```
 
@@ -37,7 +41,7 @@ Example: Use case
     datingProfile('Tammy'); // Hi, I'm Tammy, and I like most forms of data processing
     
     // ES6
-    const datingProfile = function(name = 'Sal', interests = 'collecting roadkill') {
+    const datingProfile = function(name = 'Sal', interests = 'eels') {
         console.log(`Hi, I'm ${name}, and I like ${interests}`);
     };
     

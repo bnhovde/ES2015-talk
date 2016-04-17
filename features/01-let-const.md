@@ -4,7 +4,18 @@
 
 Hoisting is a well known oddity of javaScript. It's something we've gotten used to, but I think not one developer can say they haven't ever been tripped up by hoisting.
 
-[Slide: Hoisting]
+Example: Hoisting
+
+```javascript
+    function varTest() {
+        var x = 31;
+        if (true) {
+            var x = 71;
+            console.log(x);
+        }
+        console.log(x);
+    }
+```
 
 `let` and `const` are new variable declaration statements.
 
@@ -96,12 +107,10 @@ Example:
 Example:
 
 ```javascript
-function(){
-    
+{
     // const with int value
     const year = 2016;
-    
-    person.name = 'Ingrid';
+
     year = 2017; // Error!
     
     const person = {};
@@ -109,9 +118,8 @@ function(){
     person.name = 'Ingrid';
     person.age  = 32;
     
-    person = { 'name' : 'Ingrid; } // Error!
-    person = 'test' // Error!
-    
+    person = { 'name' : 'Ingrid' }; // Error!
+    person = 'test'; // Error!
 };
 ```
 
@@ -130,3 +138,6 @@ For future projects:
 - use const for variables which cannot be reassigned
 - when writing ES6, there are few use-cases for `var` any more
 - use `var` to indicate legacy code
+
+## References
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let

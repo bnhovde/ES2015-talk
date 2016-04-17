@@ -47,6 +47,6 @@ Source: [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-s
 
 For future projects:
 
+- use const as default
 - use let for variables that will change over time
-- use const for variables which cannot be reassigned
 - when writing ES6, there are few use-cases for `var` any more
