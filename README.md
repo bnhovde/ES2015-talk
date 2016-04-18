@@ -34,6 +34,10 @@ __
     * Goals for the talk
 * Agenda
 * JavaScript in 2016
+    * Fatigue
+    * Bower
+    * npm
+    * web assembly
 * ES6/2015
     * Stages
     * Sugar
@@ -118,15 +122,17 @@ Ok, so for [the ones that do], this will be more of a refresher. nd please shout
 
 > [Goals]
 
-There's a lot of them, so I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are low level features primarily for people that build libraries, so you might not ever see unless you actively go looking.
+These are the goals of this talk.
+
+Firstly, I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
+
+Then there's the new features. I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are primitives primarily for people that build libraries on top of, so you might not ever see unless you actively go looking.
 
 Because of the amount of new stuff, I don't expect - unless you know all of the features already - that you'll rememeber everything I cover here today.
 
 What I want you to do is, as I go through the features think about they would fit in with your workflow and codebase, and then make a mental note of them.
 
 Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
-
-Aside from Learning ES6 I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
 
 I'll also touch on this year's release - "ES2016" - and other upcoming features if there's time.
 
@@ -241,6 +247,10 @@ So why am I talking about this? What does it have to do with ES6? Well, I think 
 It's not an all-or-nothing deal. As long as you're transpiling you can adopt features one at a time. You don't have to read the full spec before you start writing ES6.
 
 If you adopt a new framework then you can't just pick and mix like this, so it's quite nice to be able to slowly adopt features as you see fit.
+
+> [slide: web assembly]
+
+Web assembly
 
 ...
 
@@ -539,7 +549,7 @@ Don't get fatigued! Keep it simple!
 
 ______
 
-## Useful resources and sources
+## Refrences & Useful resources
 
 * [Getting started with webpack and React, ES6 style](http://humaan.com/getting-started-with-webpack-and-react-es6-style/)
 * [Sugar &amp; Spice and everything nice about ES6 (Nodevember 2015)](http://benmvp.github.io/slides/nodevember2015-es6.html#/)
@@ -562,7 +572,13 @@ ______
 * [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
 * [Mikael Brevik - Destructuring presentation](http://git.mikaelb.net/presentations/bartjs/destructuring)
 
-
 ## Credits
 
 <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+##### Used for best practices & examples
+
+* https://github.com/lukehoban/es6features
+* https://github.com/airbnb/javascript
+* https://github.com/addyosmani/es6-equivalents-in-es5
+* https://github.com/DrkSephy/es6-cheatsheet
