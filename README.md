@@ -43,7 +43,6 @@ __
     * Sugar
     * browser support
 * Babel   
-* Approach
 * New features
     * let, const
     * destructuring
@@ -52,16 +51,15 @@ __
     * Template strings
     * Modules
     * Parameters
-    * Object method shorthands / Concise Object Methods
+    * Enhanced Objects
     * Promises
     * for of
     * Object.assign
     * Classes
     * Enhanced object literals
     * Generators (basics)
-* Useful patterns
-    * Replacing IIFEs with Blocks
-* Updating your workflow
+* Getting started with Babel
+* Updating ES5 library
 * ES7/2016 and beyond
     * Observables
     * Async await (ES8/2017)
@@ -348,8 +346,6 @@ __
 
 * -> jsjabber episode - TC39, challenges.
 * -> S: Quotes
-* -> 
-* -> 
 
 ---
 
@@ -364,10 +360,9 @@ He covers it much better than I can hope of doing here now, but let me show you 
 
 ### Stages
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> Good time to go through stages
+* -> D: Stages link
+* -> Feature, champion, stage 4 = release
 
 ---
 
@@ -386,10 +381,12 @@ __
 
 ### "Syntactical sugar"
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> Criticism, sugar
+* -> Coffescript, (ES6 owes lots), also sugar
+* -> Nothing wrong! 
+* -> Better dev experience, less code
+* -> Cognitive load, less to reason about
+* -> default params, destricturing = less boilerplate
 
 ---
 
@@ -407,19 +404,16 @@ __
 
 ### browser support
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> Patchy. IE11, Safari
+* -> nodejs
+* -> S: Table
+* -> Babel to the rescue!
 
 ---
 
 Browser support for es6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
 
-nodejs
-
-External link: [http://kangax.github.io/compat-table/es6](http://kangax.github.io/compat-table/es6)
-
+Demo: [http://kangax.github.io/compat-table/es6](http://kangax.github.io/compat-table/es6)
 
 That's okay though, we've got babel.
 
@@ -428,19 +422,20 @@ ______
 
 ## Babel
 
-* -> 
-* -> 
-* -> 
-* -> 
-
-
-Some features are transpiled, others polyfilled.
+* -> use the ES6, 7 and 8 features you want today. 
+* -> Q: Use babel? Build step js?
+* -> Some features transpiled, others babel-polyfill
+* -> Worried about transpiling? 
+* -> Debugger, source maps, not that different
+* -> Worth the hassle? Less code, more fun!
+* -> Demo: Babel stages
+* -> Demo: .babelrc
 
 > [Demo: https://babeljs.io/#es2015]
 
-This allows you to use the ES6, 7 and 8 features you want today. 
-
 ---
+
+Babel allows you to use the ES6, 7 and 8 features you want today. 
 
 > Q: How many of you use babel today?
 > Q: How many of you have some kind of build step for your javascript? Minification? Linting etc? 
@@ -449,8 +444,6 @@ Babel transpiles modern js features into ES5. How does it work? Magic..
 
 - Some features are transpiled to ES5 via syntax transformers
 - More complex features are polyfilled with `babel-polyfill`
-
-This allows you to use the ES6, 7 and 8 features you want today. 
 
 If you're a little worried about transpiling, I hear you.
 
@@ -464,32 +457,12 @@ Is it worth the hassle? The overall developer experience I feel is better. My co
 
 With babel you can enable the stages you want, even stage 0 features.
 
-> !demo .babelrc
-
-Configuring babel is done through the babelrc file. Yep, another config file.
-
-______
-
-## Approach
-
-* -> 
-* -> 
-* -> 
-* -> 
-
----
-
-> !DEMO = show app
-
-I've created a simple app that simulates the american election system. I know you're not supposed to mix politics and tech talks, but this is a fictional election. Any resemblence to real people is absolutely coincidental.
-
-Anyway, like I said earlier, the module is written in ES5, and as I go through the new features I'll dive in and update the app to use the new features.
-
-(TIME: 30)
 
 ______
 
 ## New features
+
+* -> Demo each feature
 
 > [image of features]
 
@@ -513,37 +486,46 @@ ______
 ______
 
 
-## Useful patterns
+## Getting setup with babel
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> Fitting babel in your workflow
+* -> npm scripts
+* -> .babelrc
+* -> build example
 
 ---
 
-    * Functional
+> !demo .babelrc
+
+Configuring babel is done through the babelrc file. Yep, another config file.
+
+`npm run build`
+
 
 ______
 
-## 3rd party libraries?
+## Updating ES5 library
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> Created app, american electiorate system. 
+* -> Written in ES5. Update!
 
 ---
 
+> !DEMO = show app
+
+I've created a simple app that simulates the american election system. I know you're not supposed to mix politics and tech talks, but this is a fictional election. Any resemblence to real people is absolutely coincidental.
+
+Anyway, like I said earlier, the module is written in ES5, and as I go through the new features I'll dive in and update the app to use the new features.
+
+> !DEMO = update app
 
 ______
 
 ## ES7/2016 and beyond
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> Upcoming features
+* -> Show Features
+* -> Web assembly. Ann in june by Eich. Low level bunary compile target.
 
 ---
 
@@ -574,10 +556,15 @@ ______
     
 ## Final thoughts
 
-* -> 
-* -> 
-* -> 
-* -> 
+* -> worth it? I think so.
+* -> new js, and less code is better. Less room for error.
+* -> Type script
+* -> not all or nothing
+* -> Compilers never go away
+* -> Benefits
+* -> Words of caution
+* -> Quotes
+* -> Final quote
 
 ---
 
@@ -592,7 +579,6 @@ Is it worth it? I think so. This is the new js, and less code is better. Less ro
 
 Simple benefits:
 
-- A great deal less boilerplate = less code = less room for error
 - No more `self = this` (arrows)
 - Less data validation in functions (default parameters)
 
