@@ -181,8 +181,9 @@ Example: Using promise
 
 ## Use case: 
 
-- Async code
+- Working with async data
 - Concurrent async requests
+- REST etc
 
 ## Sources:
 

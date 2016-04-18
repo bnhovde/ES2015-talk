@@ -350,7 +350,7 @@ ______
     * Template strings
     * Modules
     * Parameters
-    * Object method shorthands / Concise Object Methods
+    * Enhanced Object Literals
     * Promises
     * for of
     * Object.assign
@@ -387,6 +387,10 @@ ______
     * Q&A
     
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
+
+- Adoption will happen (type script - already es6)
+- Not an all-or-nothing deal
+- Compilers aren’t going away
 
 Simple benefits:
 
