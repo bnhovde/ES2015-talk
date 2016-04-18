@@ -79,7 +79,15 @@ ______
 
 ## Introduction
 
-- 
+* Welcome
+* Personal intro (name/role)
+* Talk intro (ES6, "new" features, put them into practice and benefit from)
+* Realized, after proposing talk, ES6 = huge. Worried about length.
+* Q: Using ES6 today? In production?
+
+---
+
+> [Intro slide]
 
 Hi all, thanks for coming.
 
@@ -87,13 +95,28 @@ My name is Bård, I’m a Front-End Developer working at CDD, we’re a small di
 
 I’m here to talk about ES6. About the "new" features and how to put them into practice and benefit from them.
 
-> Q: How many of you are using ES6 today?
-
-> [Intro slide]
-
 When I suggested doing this talk back in December I remember thinking that it'd be a quick and easy talk to put together. I'd been using ES6 in a couple of projects and felt like I had a pretty good grasp of the basics.
 
 When it came time to start writing the talk I realized how little of ES6 I was using. There's SO much there. I knew it was big but as I kept discovering new features I started to worry about the length of this talk.
+
+> Q: How many of you are using ES6 today?
+> Q: How many of you are using ES6 in a actual product? So a production website or an app etc?
+
+Ok, so for [the ones that do], this will be more of a refresher. nd please shout if I miss something!
+
+
+--
+
+### Goals
+
+* 
+* 
+* 
+* 
+
+---
+
+> [Goals]
 
 There's a lot of them, so I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are low level features primarily for people that build libraries, so you might not ever see unless you actively go looking.
 
@@ -101,23 +124,26 @@ Because of the amount of new stuff, I don't expect - unless you know all of the 
 
 What I want you to do is, as I go through the features think about they would fit in with your workflow and codebase, and then make a mental note of them.
 
-If you're already familiar with ES6, use this as a refresher. And please shout if I miss something!
-
 Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
-
---
-
-> [Goals]
 
 Aside from Learning ES6 I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
 
 I'll also touch on this year's release - "ES2016" - and other upcoming features if there's time.
+
+
 
 So!
 
 __
 
 ### About me
+
+* 
+* 
+* 
+* 
+
+---
 
 > [About me]
 
@@ -134,6 +160,13 @@ Anyway, that's plenty about me I think. Let's get to it.
 ______
 
 ## Agenda
+
+* 
+* 
+* 
+* 
+
+---
 
 > [Agenda]
     
@@ -162,6 +195,13 @@ All right then. Let's get on with the talk.
 ______
 
 ## JavaScript in 2016
+
+* 
+* 
+* 
+* 
+
+---
 
 The JavaScript ecosystem in 2016 is a pretty chaotic place. There's lots of articles written on this. You've probably heard phrases like "JavaScript fatigue" or "tooling fatigue" being used, and rightly so.
 
@@ -208,6 +248,13 @@ ______
 
 ## ES6/2015
 
+* 
+* 
+* 
+* 
+
+---
+
 Okay, so ES6 has been officially "out" for close to a year now.
 
 There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next Harmony.. I'd like to attempt to clear this up, hopefully this won't just confuse you more.
@@ -250,7 +297,30 @@ This is good for a few reasons:
 
 __
 
+### The Spec process
+
+* 
+* 
+* 
+* 
+
+---
+
+There's a jsjabber [episode with Jafar Husain](https://devchat.tv/js-jabber/168-jsj-the-future-of-javascript-with-jafar-husain)
+
+>  One of the things the committee really focuses on, and this is something that's been so healthy, it's been retrospective, really healthy, is primitives
+
+> Because I think one of the healthy things about the JavaScript is that we're looking not necessarily to innovate necessarily. We're looking to find what people are really doing out there on the web. We're looking to enable them to build features themselves
+
+
 ### Stages
+
+* 
+* 
+* 
+* 
+
+---
 
 I think now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
 
@@ -271,6 +341,13 @@ __
 
 ### "Syntactical sugar"
 
+* 
+* 
+* 
+* 
+
+---
+
 I've seen a lot of comments on how many of the ES6 features are "Syntactical sugar" on top of ES5.
 
 Coffeescript, which by the way we owe a lot of ES6's refinements to, is also "sugar".
@@ -285,6 +362,13 @@ __
 
 ### browser support
 
+* 
+* 
+* 
+* 
+
+---
+
 Browser support for es6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
 
 nodejs
@@ -298,6 +382,13 @@ That's okay though, we've got babel.
 ______
 
 ## Babel
+
+* 
+* 
+* 
+* 
+
+---
 
 > Q: How many of you use babel today?
 > Q: How many of you have some kind of build step for your javascript? Minification? Linting etc? 
@@ -328,6 +419,13 @@ Configuring babel is done through the babelrc file. Yep, another config file.
 ______
 
 ## Approach
+
+* 
+* 
+* 
+* 
+
+---
 
 > !DEMO = show app
 
@@ -365,16 +463,37 @@ ______
 
 ## Useful patterns
 
+* 
+* 
+* 
+* 
+
+---
+
     * Functional
 
 ______
 
 ## 3rd party libraries?
 
+* 
+* 
+* 
+* 
+
+---
+
 
 ______
 
 ## ES7/2016 and beyond
+
+* 
+* 
+* 
+* 
+
+---
 
     * Observables
     * Async await (ES8/2017)
@@ -382,6 +501,13 @@ ______
 ______
     
 ## Final thoughts
+
+* 
+* 
+* 
+* 
+
+---
 
     * CTA's
     * Q&A
@@ -397,9 +523,11 @@ Simple benefits:
 - A great deal less boilerplate = less code = less room for error
 - No more `self = this` (arrows)
 - Less data validation in functions (default parameters)
-- 
 
 Words of caution:
+
+- Prepare for some pain
+- Good quote:
 
 > When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 
 
