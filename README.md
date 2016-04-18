@@ -59,7 +59,6 @@ __
     * Classes
     * Enhanced object literals
     * Generators (basics)
-
 * Useful patterns
     * Replacing IIFEs with Blocks
 * Updating your workflow
@@ -76,22 +75,24 @@ ______
 
     Legend:
     
-    [bracketed contents] = Slide indicator;
-    !DEMO = Deno indicator;
+    [Slide: name] = Slide indicator;
+    !DEMO = Demo indicator;
     (TIME: 60) = Timing indicator;
+    * -> = Key words/summary
     
 
 ## Introduction
 
-* Welcome
-* Personal intro (name/role)
-* Talk intro (ES6, "new" features, put them into practice and benefit from)
-* Realized, after proposing talk, ES6 = huge. Worried about length.
-* Q: Using ES6 today? In production?
+* -> Welcome
+* -> Personal intro (name/role)
+* -> Talk intro (ES6, "new" features, put them into practice and benefit from)
+* -> Realized, after proposing talk, ES6 = huge. Worried about length.
+* -> Q: Using ES6 today? In production?
+* -> For you = refresher. Tell me if miss stuff.
 
 ---
 
-> [Intro slide]
+> [Slide: Intro]
 
 Hi all, thanks for coming.
 
@@ -103,63 +104,91 @@ When I suggested doing this talk back in December I remember thinking that it'd 
 
 When it came time to start writing the talk I realized how little of ES6 I was using. There's SO much there. I knew it was big but as I kept discovering new features I started to worry about the length of this talk.
 
-> Q: How many of you are using ES6 today?
-> Q: How many of you are using ES6 in a actual product? So a production website or an app etc?
+* Q: How many of you are using ES6 today?
+* Q: How many of you are using ES6 in an actual product? So a production website or an app etc?
 
-Ok, so for [the ones that do], this will be more of a refresher. nd please shout if I miss something!
+Ok, so for you[the ones that do], this will be more of a refresher. And please shout if I miss something!
 
 
 --
 
-### Goals
+## Goals
 
-* 
-* 
-* 
-* 
+* -> Javascript: where it is, where it's going
+* -> ES6 - very large - focus on befenicial features.
+* -> Lots of primitives for library builders, might not see unless actively look
+* -> What's next? Upcoming features - ES2016
 
 ---
 
-> [Goals]
-
 These are the goals of this talk.
+
+> [Slide: Goals]
 
 Firstly, I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
 
-Then there's the new features. I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are primitives primarily for people that build libraries on top of, so you might not ever see unless you actively go looking.
+Then there's the new features. There's a ton of them. ES6 is a beast.
+
+I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are primitives primarily for people that build libraries on top of, so you might not ever see unless you actively go looking.
 
 Because of the amount of new stuff, I don't expect - unless you know all of the features already - that you'll rememeber everything I cover here today.
 
-What I want you to do is, as I go through the features think about they would fit in with your workflow and codebase, and then make a mental note of them.
+All I want you to do is, (as I go through the features), think about they would fit in with your workflow and in your code, and then make a mental note of them.
 
-Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
+Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll really fuel your hatred to new levels.
 
 I'll also touch on this year's release - "ES2016" - and other upcoming features if there's time.
-
-
 
 So!
 
 __
 
-### About me
+## About me
 
-* 
-* 
-* 
-* 
+* -> Personal intro
+* -> FED since ~2010. Lots of time reading. Like sharing knowledge.
+* -> Name, meaning, 
+* -> S: Home town. Middle of norway. South of the wall.
+* -> S: Home town. House.
+* -> S: Pick axe.
+* -> S: Tourist attraction. Play cards right = train to concert hall.
+* -> Enough about me..
 
 ---
 
-> [About me]
+> [Slide: About me]
 
 Who am I, and how am I qualified to be here talking to you all? Good question.
 
 I've been a front-end developer since around 2010. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
 
-> [Name]
+> [Slide: Name]
 
-> [Folldal]
+My name is pretty unusual, and before this talk I went online to try and find the meaning of it for you. Here's the down-low.
+
+> [Slide: Map]
+
+This is where I'm from. In the middle of norway (but south of the wall).
+
+> [Slide: Map 2]
+
+You could actually drive there. It'd take you 23 hours via a ferry from Denmark.
+
+> [Slide: Folldal]
+
+This is my home town. That's my house (just joking)
+
+> [Slide: pickaxe]
+
+Folldal used to be a mining town, so that's a big one in front of the council.
+
+> [Slide: train]
+
+Now it's a tourist attraction, and if you play your cards right you get to go on a train into the mines...
+
+> [Slide: concert hall]
+
+..where there's a concert hall.
 
 Anyway, that's plenty about me I think. Let's get to it.
 
@@ -167,14 +196,18 @@ ______
 
 ## Agenda
 
-* 
-* 
-* 
-* 
+* -> JS2016, ES6
+* -> Browser support & Babel
+* -> New features (biggest part), then break
+* -> S: Features. Cover.
+* -> S: Order. Final exams. (grenade)
+* -> S: Keep awake, drift off 20 min, riveting stuff. Spiced it up!
+* -> Quiz slides, demo
+
 
 ---
 
-> [Agenda]
+> [Slide: Agenda]
     
 This is the agenda. I'm first gonna talk about the state of JavaScript in 2016.
 
@@ -182,11 +215,11 @@ I'll then talk about how ES6 fits into this, about browser support and run throu
 
 The biggest part of the talk will be going through ES6 and the new features. 
 
-Before I go through the features I'll show you a JavaScript library I've written without ES6, and as I tick off the features I'll implement these into the ES5 library to demonstrate use cases.
+Then after the break I'll show you a JavaScript library I've written without ES6, and then I'll implement ES6 to demonstrate use cases.
 
-Then after the break I'll go through some upcoming features.
+Finally I'll go through some upcoming features.
 
-> [list of features - show order]
+> [Slide: list of features - show order]
 
 Like I said, I was worried about how to keep you focused through all of this material? I mean, I think it's pretty riveting stuff, but I would probably be drifting off too after 20 minutes of theory, so I've tried to spice it up a little..
 
@@ -194,7 +227,7 @@ Sprinkled in with the rest of the slides I've added "Surprise quiz slides". When
 
 Let's try one out now. Ready?
 
-> [quiz slide]
+> [Slide: quiz slide]
 
 All right then. Let's get on with the talk.
 
@@ -202,10 +235,14 @@ ______
 
 ## JavaScript in 2016
 
-* 
-* 
-* 
-* 
+* -> Chaotic place. "JS Fatigue", "Tooling fatigue"
+* -> S: folder. Config files.
+* -> S: Tweet
+* -> S: Bower, things shift towards npm. npm3 = flat
+* -> S: npm implosion.
+* -> ES6 landed turbulent time, so much else to learn
+* -> ES6: not all or nothing. Not like framework.
+* -> ES6: adopt features as you learn
 
 ---
 
@@ -213,7 +250,7 @@ The JavaScript ecosystem in 2016 is a pretty chaotic place. There's lots of arti
 
 If you've tried setting up a modern js JavaScript stack from scratch in the last year you've probably felt some of this pain. Have a look at this. 
 
-[> slide showing folder] 
+> [Slide: showing folder] 
 
 This is the root folder of a very popular Redux/React "starter kit".
 
@@ -222,17 +259,19 @@ The amount of config and dotfiles are staggering. What do they all do? If you're
 > [slide: https://twitter.com/iamdevloper/status/702464176954875904]
 
 
-I remember starting out learning react and setting up a pretty basic ...
+So what else has happened in 2016?
 
-So what else has happened in 2016? 
 
 > [slide: bower]
 
-Bower has died. Well, kind of. The Angular team has announced that Angular 2 will be distributed through npm, so there'll be no official bower package for Angular 2.
-
-> [slide: npm]
+Bower might be on it's way out as more and more things shift towards npm and node land. The Angular team has announced that Angular 2 will be distributed through npm, so there'll be no official bower package for Angular 2.
 
 Then there was the recent npm incident that sparked a shitstorm. 
+
+> [slide: npm1]
+> [slide: npm2]
+> [slide: npm3]
+
 
 If you missed that one, there was some dispute over a package name on npm.
 
@@ -248,28 +287,18 @@ It's not an all-or-nothing deal. As long as you're transpiling you can adopt fea
 
 If you adopt a new framework then you can't just pick and mix like this, so it's quite nice to be able to slowly adopt features as you see fit.
 
-> [slide: web assembly]
-
-Web assembly was first announced in June.
-
-It's low-level binary compile format for the web platform.
-
-I'm by no means an expert, but from what I understand 
-
-JavaScript has the hard task of being a compiler target and also 
-
-Levels the web playing field for other languages.
-
 ...
 
 ______
 
 ## ES6/2015
 
-* 
-* 
-* 
-* 
+* -> "out" for ~ 1 year
+* -> Naming acronyms. Clear this up!
+* -> S: ES6 = big. 6 years.
+* -> New yearly schedule
+* -> Browser updates, smaller releases.
+* -> Once learned ES6, less daunting
 
 ---
 
@@ -286,7 +315,7 @@ There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next 
 * VBScript - Another implementation of ECMAscript
 * JScript - Another implementation of ECMAscript
 * ActionScript - Another implementation of ECMAscript
-* Harmony
+* Harmony - Progress bucketed after ES5.1/4 split
 * TC39 - committee put together by ECMA to progress in the language (technical committee number 39).
 * ES.next - when the committee’s working on the next API, this is what they call it
 * ES2015 - Released in June 2015. First release for 6 years. 
@@ -303,7 +332,7 @@ There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next 
 
 The ES6 spec was finalised by the TC39 committee in June 2015, after 6 years or work.
 
-> [It's big!]
+> [Slide: It's big!]
 
 6 years is a lot, so ES6 is big. It's way too big, which is why after ES6 TC39 has decided to do adopt yearly releases, hencey the new naming convention.
 
@@ -317,26 +346,28 @@ __
 
 ### The Spec process
 
-* 
-* 
-* 
-* 
+* -> jsjabber episode - TC39, challenges.
+* -> S: Quotes
+* -> 
+* -> 
 
 ---
 
-There's a jsjabber [episode with Jafar Husain](https://devchat.tv/js-jabber/168-jsj-the-future-of-javascript-with-jafar-husain)
+There's a jsjabber episode that I keep pushing on people titled [The future of JavaScript](https://devchat.tv/js-jabber/168-jsj-the-future-of-javascript-with-jafar-husain). In it, Jafar Husain talks about TC39 and the challenges of designing js by comittee.
 
->  One of the things the committee really focuses on, and this is something that's been so healthy, it's been retrospective, really healthy, is primitives
+He covers it much better than I can hope of doing here now, but let me show you a couple of quotes that I think summarises it:
 
-> Because I think one of the healthy things about the JavaScript is that we're looking not necessarily to innovate necessarily. We're looking to find what people are really doing out there on the web. We're looking to enable them to build features themselves
+>  One of the things the committee really focuses on, and this is something that's been really healthy, is primitives.
+
+> We're looking not necessarily to innovate. We're looking to find what people are really doing out there on the web. We're looking to enable them to build features themselves.
 
 
 ### Stages
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -350,15 +381,15 @@ Each ecmascript feature has to go through several stages before it makes it into
 
 With the new yearly releace cycle, features that has made it to stage 4 will be included in the release that year, which is a good way of doing it.
 
-> [Quiz Slide]
+> [Slide: Quiz Slide]
 __
 
 ### "Syntactical sugar"
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -376,10 +407,10 @@ __
 
 ### browser support
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -397,15 +428,15 @@ ______
 
 ## Babel
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 
 Some features are transpiled, others polyfilled.
 
-> [https://babeljs.io/]
+> [Demo: https://babeljs.io/#es2015]
 
 This allows you to use the ES6, 7 and 8 features you want today. 
 
@@ -441,10 +472,10 @@ ______
 
 ## Approach
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -484,10 +515,10 @@ ______
 
 ## Useful patterns
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -497,10 +528,10 @@ ______
 
 ## 3rd party libraries?
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -509,24 +540,44 @@ ______
 
 ## ES7/2016 and beyond
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
     * Observables
     * Async await (ES8/2017)
     
+
+> [slide: web assembly]
+
+Web assembly was first announced in June by Brendan Eich (js papa).
+
+It's low-level binary compile format for the web platform.
+
+I'm by no means an expert, but from what I understand:
+
+- Web assembly = compilation target for other languages.
+- To be used for heavy lifting. Games, video editing etc.
+
+> WebAssembly fills in the gaps that would be awkward to fill with JavaScript.
+
+> [slide: web assembly & js chart]
+
+JavaScript is currently in a difficult position, being both a compiler target and also 
+
+Levels the web playing field for other languages.
+    
 ______
     
 ## Final thoughts
 
-* 
-* 
-* 
-* 
+* -> 
+* -> 
+* -> 
+* -> 
 
 ---
 
@@ -548,6 +599,7 @@ Simple benefits:
 Words of caution:
 
 - Prepare for some pain
+- Concern about amount of features = more to learn?
 - Good quote:
 
 > When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 
@@ -557,6 +609,12 @@ Words of caution:
 > -- ponyfoo guy
 
 Don't get fatigued! Keep it simple!
+
+Final quote:
+
+> "There are only two kinds of languages: the ones people complain about and the ones nobody uses" -- Bjarne Stroustrup
+
+
 
 ______
 
