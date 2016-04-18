@@ -250,7 +250,15 @@ If you adopt a new framework then you can't just pick and mix like this, so it's
 
 > [slide: web assembly]
 
-Web assembly
+Web assembly was first announced in June.
+
+It's low-level binary compile format for the web platform.
+
+I'm by no means an expert, but from what I understand 
+
+JavaScript has the hard task of being a compiler target and also 
+
+Levels the web playing field for other languages.
 
 ...
 
