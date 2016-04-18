@@ -34,6 +34,10 @@ __
     * Goals for the talk
 * Agenda
 * JavaScript in 2016
+    * Fatigue
+    * Bower
+    * npm
+    * web assembly
 * ES6/2015
     * Stages
     * Sugar
@@ -79,7 +83,15 @@ ______
 
 ## Introduction
 
-- 
+* Welcome
+* Personal intro (name/role)
+* Talk intro (ES6, "new" features, put them into practice and benefit from)
+* Realized, after proposing talk, ES6 = huge. Worried about length.
+* Q: Using ES6 today? In production?
+
+---
+
+> [Intro slide]
 
 Hi all, thanks for coming.
 
@@ -87,37 +99,57 @@ My name is Bård, I’m a Front-End Developer working at CDD, we’re a small di
 
 I’m here to talk about ES6. About the "new" features and how to put them into practice and benefit from them.
 
-> Q: How many of you are using ES6 today?
-
-> [Intro slide]
-
 When I suggested doing this talk back in December I remember thinking that it'd be a quick and easy talk to put together. I'd been using ES6 in a couple of projects and felt like I had a pretty good grasp of the basics.
 
 When it came time to start writing the talk I realized how little of ES6 I was using. There's SO much there. I knew it was big but as I kept discovering new features I started to worry about the length of this talk.
 
-There's a lot of them, so I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are low level features primarily for people that build libraries, so you might not ever see unless you actively go looking.
+> Q: How many of you are using ES6 today?
+> Q: How many of you are using ES6 in a actual product? So a production website or an app etc?
+
+Ok, so for [the ones that do], this will be more of a refresher. nd please shout if I miss something!
+
+
+--
+
+### Goals
+
+* 
+* 
+* 
+* 
+
+---
+
+> [Goals]
+
+These are the goals of this talk.
+
+Firstly, I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
+
+Then there's the new features. I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are primitives primarily for people that build libraries on top of, so you might not ever see unless you actively go looking.
 
 Because of the amount of new stuff, I don't expect - unless you know all of the features already - that you'll rememeber everything I cover here today.
 
 What I want you to do is, as I go through the features think about they would fit in with your workflow and codebase, and then make a mental note of them.
 
-If you're already familiar with ES6, use this as a refresher. And please shout if I miss something!
-
 Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
 
---
-
-> [Goals]
-
-Aside from Learning ES6 I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
-
 I'll also touch on this year's release - "ES2016" - and other upcoming features if there's time.
+
+
 
 So!
 
 __
 
 ### About me
+
+* 
+* 
+* 
+* 
+
+---
 
 > [About me]
 
@@ -134,6 +166,13 @@ Anyway, that's plenty about me I think. Let's get to it.
 ______
 
 ## Agenda
+
+* 
+* 
+* 
+* 
+
+---
 
 > [Agenda]
     
@@ -162,6 +201,13 @@ All right then. Let's get on with the talk.
 ______
 
 ## JavaScript in 2016
+
+* 
+* 
+* 
+* 
+
+---
 
 The JavaScript ecosystem in 2016 is a pretty chaotic place. There's lots of articles written on this. You've probably heard phrases like "JavaScript fatigue" or "tooling fatigue" being used, and rightly so.
 
@@ -202,11 +248,30 @@ It's not an all-or-nothing deal. As long as you're transpiling you can adopt fea
 
 If you adopt a new framework then you can't just pick and mix like this, so it's quite nice to be able to slowly adopt features as you see fit.
 
+> [slide: web assembly]
+
+Web assembly was first announced in June.
+
+It's low-level binary compile format for the web platform.
+
+I'm by no means an expert, but from what I understand 
+
+JavaScript has the hard task of being a compiler target and also 
+
+Levels the web playing field for other languages.
+
 ...
 
 ______
 
 ## ES6/2015
+
+* 
+* 
+* 
+* 
+
+---
 
 Okay, so ES6 has been officially "out" for close to a year now.
 
@@ -250,7 +315,30 @@ This is good for a few reasons:
 
 __
 
+### The Spec process
+
+* 
+* 
+* 
+* 
+
+---
+
+There's a jsjabber [episode with Jafar Husain](https://devchat.tv/js-jabber/168-jsj-the-future-of-javascript-with-jafar-husain)
+
+>  One of the things the committee really focuses on, and this is something that's been so healthy, it's been retrospective, really healthy, is primitives
+
+> Because I think one of the healthy things about the JavaScript is that we're looking not necessarily to innovate necessarily. We're looking to find what people are really doing out there on the web. We're looking to enable them to build features themselves
+
+
 ### Stages
+
+* 
+* 
+* 
+* 
+
+---
 
 I think now is a good time to briefly run through the stages a new feature has to go through before it makes it into the spec.
 
@@ -267,6 +355,13 @@ __
 
 ### "Syntactical sugar"
 
+* 
+* 
+* 
+* 
+
+---
+
 I've seen a lot of comments on how many of the ES6 features are "Syntactical sugar" on top of ES5.
 
 Coffeescript, which by the way we owe a lot of ES6's refinements to, is also "sugar".
@@ -280,6 +375,13 @@ With ES6, things like default parameters and destructuring will eliminate the ne
 __
 
 ### browser support
+
+* 
+* 
+* 
+* 
+
+---
 
 Browser support for es6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
 
@@ -295,7 +397,11 @@ ______
 
 ## Babel
 
-Babel transpiles modern js features into ES5. How does it work? Magic..
+* 
+* 
+* 
+* 
+
 
 Some features are transpiled, others polyfilled.
 
@@ -303,10 +409,19 @@ Some features are transpiled, others polyfilled.
 
 This allows you to use the ES6, 7 and 8 features you want today. 
 
+---
+
 > Q: How many of you use babel today?
 > Q: How many of you have some kind of build step for your javascript? Minification? Linting etc? 
 
-If you're a little worried about transpiling, I hear you!
+Babel transpiles modern js features into ES5. How does it work? Magic..
+
+- Some features are transpiled to ES5 via syntax transformers
+- More complex features are polyfilled with `babel-polyfill`
+
+This allows you to use the ES6, 7 and 8 features you want today. 
+
+If you're a little worried about transpiling, I hear you.
 
 My biggest worry when I added transpiling to my build step was debugging. I use the chrome debugger all the time, and the last thing I wanted was for that experience to change. Luckily, with babel and source maps, the debugging experience doesn't change THAT much. Although the code output is different to the input, it's still very similar, and the debugger works. 
 
@@ -325,6 +440,13 @@ Configuring babel is done through the babelrc file. Yep, another config file.
 ______
 
 ## Approach
+
+* 
+* 
+* 
+* 
+
+---
 
 > !DEMO = show app
 
@@ -347,7 +469,7 @@ ______
     * Template strings
     * Modules
     * Parameters
-    * Object method shorthands / Concise Object Methods
+    * Enhanced Object Literals
     * Promises
     * for of
     * Object.assign
@@ -362,16 +484,37 @@ ______
 
 ## Useful patterns
 
+* 
+* 
+* 
+* 
+
+---
+
     * Functional
 
 ______
 
 ## 3rd party libraries?
 
+* 
+* 
+* 
+* 
+
+---
+
 
 ______
 
 ## ES7/2016 and beyond
+
+* 
+* 
+* 
+* 
+
+---
 
     * Observables
     * Async await (ES8/2017)
@@ -380,19 +523,32 @@ ______
     
 ## Final thoughts
 
+* 
+* 
+* 
+* 
+
+---
+
     * CTA's
     * Q&A
     
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
+
+- Adoption will happen (type script - already es6)
+- Not an all-or-nothing deal
+- Compilers aren’t going away
 
 Simple benefits:
 
 - A great deal less boilerplate = less code = less room for error
 - No more `self = this` (arrows)
 - Less data validation in functions (default parameters)
-- 
 
 Words of caution:
+
+- Prepare for some pain
+- Good quote:
 
 > When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 
 
@@ -404,7 +560,7 @@ Don't get fatigued! Keep it simple!
 
 ______
 
-## Useful resources and sources
+## Refrences & Useful resources
 
 * [Getting started with webpack and React, ES6 style](http://humaan.com/getting-started-with-webpack-and-react-es6-style/)
 * [Sugar &amp; Spice and everything nice about ES6 (Nodevember 2015)](http://benmvp.github.io/slides/nodevember2015-es6.html#/)
@@ -427,7 +583,13 @@ ______
 * [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
 * [Mikael Brevik - Destructuring presentation](http://git.mikaelb.net/presentations/bartjs/destructuring)
 
-
 ## Credits
 
 <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+##### Used for best practices & examples
+
+* https://github.com/lukehoban/es6features
+* https://github.com/airbnb/javascript
+* https://github.com/addyosmani/es6-equivalents-in-es5
+* https://github.com/DrkSephy/es6-cheatsheet
