@@ -1,5 +1,4 @@
-
-# Object.assign
+# Strings and Unicode
 
 
 
@@ -9,7 +8,7 @@ Example: Async functions without promises
 
 ```javascript
 {
-    Object.assign(target, source_1, ..., source_n);
+      'ponyfoo'.includes('ny')
 }
 ```
         
@@ -36,5 +35,3 @@ For future projects:
 - Multi-line strings
 
 ## Sources:
-
-http://www.2ality.com/2014/01/object-assign.html
