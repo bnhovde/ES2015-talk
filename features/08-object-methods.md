@@ -1,5 +1,5 @@
 
-# Template Strings
+# Object method shorthands / Concise Object Methods
 
 
 Template strings allow you to mix strings, variables and functions.
@@ -10,20 +10,18 @@ Template strings allow you to mix strings, variables and functions.
 
     // ES5
     var person = {
-        name: 'Jon Snow',
-        status = 'dead'
-    }
-    
-    console.log('I\'m pretty sure that ' + person.name + ' is ' + person.status);
-    
+        name: 'Doyle',
+        poke: function() { console.log('Stop that!'); },
+        greet: function() { console.log('Ahoi-hoi!'); }
+    };
+
     // ES6
-    const person = {
-        name: 'Jon Snow',
-        status = 'alive'
-    }
-    
-    console.log(`I've read somewhere online that ${person.name} is ${person.status}`);
-    
+    var person = {
+        name: 'Doyle',
+        poke() { console.log('Stop that!'); },
+        greet() { console.log('Ahoi-hoi!'); }
+    };
+
 };
 ```
 

@@ -85,18 +85,33 @@ Hi all, thanks for coming.
 
 My name is Bård, I’m a Front-End Developer working at CDD, we’re a small digital agency.
 
-I’m gonna be talking primarily about ES6 today. About the "new" features and how to put them into practice and benefit from them.
+I’m here to talk about ES6. About the "new" features and how to put them into practice and benefit from them.
 
 > Q: How many of you are using ES6 today?
-> Q: And how many of you are ...
 
-My goal here today is that you all go away knowing more about ES6 than you do now, maybe see a couple of features you like and can take and put into your product or hobby project.
+> [Intro slide]
 
-I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
+When I suggested doing this talk back in December I remember thinking that it'd be a quick and easy talk to put together. I'd been using ES6 in a couple of projects and felt like I had a pretty good grasp of the basics.
 
-I'll also touch on ES7 and other upcoming features if there's time.
+When it came time to start writing the talk I realized how little of ES6 I was using. There's SO much there. I knew it was big but as I kept discovering new features I started to worry about the length of this talk.
+
+There's a lot of them, so I'll primarily focus on the ones that will most likely benefit you. A lot of the new features are low level features primarily for people that build libraries, so you might not ever see unless you actively go looking.
+
+Because of the amount of new stuff, I don't expect - unless you know all of the features already - that you'll rememeber everything I cover here today.
+
+What I want you to do is, as I go through the features think about they would fit in with your workflow and codebase, and then make a mental note of them.
+
+If you're already familiar with ES6, use this as a refresher. And please shout if I miss something!
 
 Lastly, if you absolutely hate JavaScript then I’m sure there’ll be things I show you here that’ll fuel your hatred even more.
+
+--
+
+> [Goals]
+
+Aside from Learning ES6 I'd like everyone to leave feeling like they have a full understanding of where JavaScript is right now and where it's going. 
+
+I'll also touch on this year's release - "ES2016" - and other upcoming features if there's time.
 
 So!
 
@@ -110,13 +125,9 @@ Who am I, and how am I qualified to be here talking to you all? Good question.
 
 I've been a front-end developer since around 2010. I spend an unhealthy amount of time reading about this stuff, and I love sharing knowledge, which is why I'm here.
 
-Like I said, my name is Bård. That's a fairly common Norwegian name, and I remember thinking before moving to the UK, what will they make of my name? Would they know any other Bårds?
+> [Name]
 
-Turns out that.. No, I'm the only one.
-
-Then a few years later I found out that you can just pick an english name that sounds like yours and I was furious.
-
-On the plus side though, if you ever hear someone talk about some weird foreign guy named bart or board or something.. That's me! There is no way that's anyone else!
+> [Folldal]
 
 Anyway, that's plenty about me I think. Let's get to it.
 
@@ -128,15 +139,17 @@ ______
     
 This is the agenda. I'm first gonna talk about the state of JavaScript in 2016.
 
+I'll then talk about how ES6 fits into this, about browser support and run through Bbabel.
+
 The biggest part of the talk will be going through ES6 and the new features. 
-
-> [list of features]
-
-There's a lot of them, so I'll primarily focus on the ones that will most likely benefit you. A lot of these are very low level features primarily for people that build libraries, so you might not ever see unless you actively go looking.
 
 Before I go through the features I'll show you a JavaScript library I've written without ES6, and as I tick off the features I'll implement these into the ES5 library to demonstrate use cases.
 
-When I was writing this talk I realized there's so much material here. How am I going to keep you focused through all of this material? I mean, I think it's pretty riveting stuff, but I would probably be drifting off too after 30 minutes of theory, so I've tried to spice it up a little..
+Then after the break I'll go through some upcoming features.
+
+> [list of features - show order]
+
+Like I said, I was worried about how to keep you focused through all of this material? I mean, I think it's pretty riveting stuff, but I would probably be drifting off too after 20 minutes of theory, so I've tried to spice it up a little..
 
 Sprinkled in with the rest of the slides I've added "Surprise quiz slides". When one of those pop up, the first person to shout the answer wins some candy. The questions aren't javaScript related, and you're allowed to google or bing or whatever you want to do.
 
@@ -201,13 +214,13 @@ There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next 
 
 > [Slide: names]
 
+* LiveScript - First name of js, before Sun got involved and renamed it to javaScript.(Somewhat of a marketing move at the time, with Java being very popular around then)
 * ECMA - international standard body, adopted the API
 * ECMAScript - ECMA's official API
 * javaScript - One implementation of ECMAscript
 * VBScript - Another implementation of ECMAscript
 * JScript - Another implementation of ECMAscript
 * ActionScript - Another implementation of ECMAscript
-* LiveScript - First name of js, before Sun got involved and renamed it to javaScript.(Somewhat of a marketing move at the time, with Java being very popular around then)
 * Harmony
 * TC39 - committee put together by ECMA to progress in the language (technical committee number 39).
 * ES.next - when the committee’s working on the next API, this is what they call it
@@ -375,6 +388,13 @@ ______
     
 Is it worth it? I think so. This is the new js, and less code is better. Less room for error.
 
+Simple benefits:
+
+- A great deal less boilerplate = less code = less room for error
+- No more `self = this` (arrows)
+- Less data validation in functions (default parameters)
+- 
+
 Words of caution:
 
 > When uncertain, chances are you probably should default to ES5 and older syntax instead of adopting ES6 just because you can. 
@@ -409,3 +429,8 @@ ______
 * [Ewan Valentine - ES6 is beautiful](http://ewanvalentine.io/es6-is-beautiful/)
 * [Sitepoint - Block scoping in es6](http://www.sitepoint.com/joys-block-scoping-es6/)
 * [Mikael Brevik - Destructuring presentation](http://git.mikaelb.net/presentations/bartjs/destructuring)
+
+
+## Credits
+
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

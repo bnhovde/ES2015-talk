@@ -1,6 +1,7 @@
 
 # destructuring
 
+Used to extract values from data stored in objects and Arrays.
 
 Imagine javaScript without JSON, having to set key values on objects.
 
@@ -12,6 +13,8 @@ Example:
 
 ```javascript
 {
+    // ES5 object construction
+    
     const person = {
         name: 'Tim Samson',
         features: {
@@ -47,7 +50,7 @@ Example:
         }
     }
     
-    // To get values out, you got to dig!
+    // To extract values out with ES5 you had to dig!
     const name = person.name;
     const face = person.features.face;
     const arms = person.features.arms;
@@ -69,12 +72,12 @@ You can use destructuring for other things too.
 
 ## Function parameter destructuring
 
-Useful when you only care about certain parameters
-
 Example:
 
 ```javascript
 {
+    // Useful when you only care about certain parameters
+    
     const menu = {
         appetiser: 'flea soup'
         mains: 'locust eggs'
@@ -82,7 +85,7 @@ Example:
     }
     
     function orderDessert({dessert}){
-        console.log('Can I please have a bucket of ' + dessert + ', please?');
+        console.log(`Can I please have a bucket of ${dessert}, please?`);
     }
     
     orderDessert(menu); // Can I please have a bucket of goblin sorbet, please?
@@ -92,12 +95,13 @@ Example:
 
 ## Default values
 
-Provide a fallback value if property doesn't exist
 
 Example:
 
 ```javascript
 {
+    // Provide a fallback value if property doesn't exist
+    
     const person = {
         name: 'Draco',
         age: 673
@@ -119,12 +123,15 @@ Example:
 
 ```javascript
 {
+    // Variable unpacking - common react pattern
+    
     // ES5
     var author = this.props.author;
+    var posts = this.props.posts;
     var bio = this.props.bio;
         
     // ES6
-    const { author, bio } = this.props;  
+    const { author, posts, bio } = this.props;  
 };
 ```
 

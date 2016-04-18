@@ -18,7 +18,7 @@ Example:
         age: 673
     }
     
-    function { name = 'Ricardo', height = '180cm' } = person;
+    const { name = 'Ricardo', height = '180cm' } = person;
     
     console.log(name);      // Draco
     console.log(height);    // 180cm
@@ -54,7 +54,7 @@ Turns argumets into an array
 
 
 
-## Spread Practice:
+## Spread Parameters:
 
 
 
