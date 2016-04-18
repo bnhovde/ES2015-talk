@@ -4,7 +4,7 @@ The string native has been extended with some very useful new features
 
 
 
-Example: includes()
+Example: string.includes()
 
 ```javascript
 {
@@ -19,7 +19,7 @@ Example: includes()
 ```
         
 
-Example: repeat()
+Example: string.repeat()
 
 ```javascript
 {

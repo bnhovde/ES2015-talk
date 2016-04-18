@@ -11,8 +11,24 @@ Object literals have been given more functionality with ES6.
 
 ```javascript
 {
-
+    
     // ES5
+    var Person = function() {
+        
+        // Methods
+        greet = function() {
+            console.log('hi!');
+        }
+    };
+    
+    Person.prototype.greet = function() {
+        console.log('hi!');
+    }
+    
+    Employee.prototype = Object.create(Person.prototype);
+
+
+    // ES6
     var person = {
         __proto__: person,
         name : 'Chud'
