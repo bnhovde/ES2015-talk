@@ -1,5 +1,5 @@
 
-# Promises
+# Promises (polyfill)
 
 
 Promises are perhaps the most important new feature and important to understand.

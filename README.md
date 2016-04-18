@@ -262,10 +262,6 @@ Each ecmascript feature has to go through several stages before it makes it into
 
 With the new yearly releace cycle, features that has made it to stage 4 will be included in the release that year, which is a good way of doing it.
 
-I remember reading this blog post called idomatic es6 with a great section on what happens when a new version of javaScript is released: 
-
-> In April, the ES6 spec reached its final draft. Later this month, the Grand Council of Javascript Elders will shuffle into the silver sanctum to seal the document with unicorn wax. A glass bell will ring in the spire of the tallest tower in the City and leprechauns will be dispatched to carry the good news to the farthest corners of the Kingdom. ‘ES5 is dead, long live ES6!’ they shout.
-
 > [Quiz Slide]
 __
 
@@ -301,14 +297,18 @@ ______
 
 Babel transpiles modern js features into ES5. How does it work? Magic..
 
+Some features are transpiled, others polyfilled.
+
+> [https://babeljs.io/]
+
 This allows you to use the ES6, 7 and 8 features you want today. 
 
 > Q: How many of you use babel today?
 > Q: How many of you have some kind of build step for your javascript? Minification? Linting etc? 
 
-If you're a little worried about transpiling, I hear you.
+If you're a little worried about transpiling, I hear you!
 
-My biggest worry when I added transpiling to my build step was debugging. I use the chrome debugger all the time, and the last thing I wanted was for that experience to change. Luckily, with babel and source maps, the debugging experience doesn't change that much. Although the code output is different to the input, it's still very similar, and the debugger works. 
+My biggest worry when I added transpiling to my build step was debugging. I use the chrome debugger all the time, and the last thing I wanted was for that experience to change. Luckily, with babel and source maps, the debugging experience doesn't change THAT much. Although the code output is different to the input, it's still very similar, and the debugger works. 
 
 I've been using ES6 through babel for every project I could for the last year or so, and although I've experienced certain bugs there's been no deal breakers.
 
@@ -328,7 +328,7 @@ ______
 
 > !DEMO = show app
 
-I've created a simple app that simulates the americal election system. I know you're not supposed to mix politics and tech talks, but this is a fictional election. Any resemblence to real people is absolutely coincidental.
+I've created a simple app that simulates the american election system. I know you're not supposed to mix politics and tech talks, but this is a fictional election. Any resemblence to real people is absolutely coincidental.
 
 Anyway, like I said earlier, the module is written in ES5, and as I go through the new features I'll dive in and update the app to use the new features.
 

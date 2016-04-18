@@ -1,24 +1,42 @@
 
-# Object.assign
+# Object.assign (polyfill)
 
 
 
-
-
-Example: Async functions without promises
+Example: Syntax and simple usage
 
 ```javascript
 {
+    // Syntax
     Object.assign(target, source_1, ..., source_n);
+    
+    
+    
+    
 }
 ```
         
 
-Example: Creating a promise
+Example: Real-world use case
 
 ```javascript
 {
-   
+    export default function UIModal(userOptions) {
+
+        const DOM;
+        const defaults = {
+            modal: '.js-modal',
+            openBtn: '.js-modal-btn',
+            closeBtn: '.js-modal-close-btn',
+            overlay: '.js-modal-overlay',
+            showOverlay: true
+        };
+
+        // Combine defaults with passed in options
+        const settings = Object.assign(defaults, userOptions);
+        
+        // ...
+    }
 }
 ```
 
