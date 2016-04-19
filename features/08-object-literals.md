@@ -3,8 +3,8 @@
 
 Object literals have been given more functionality with ES6.
 
-- Support for setting prototype on creation
 - Shorthands for defining methods
+- Dynamic property names
 
 
 ## Setting of prototype
@@ -75,16 +75,16 @@ Example:
 {
 
    // Computed property names (ES6)
-    let i = 0;
-    const a = {
-        ["foo" + ++i]: i,
-        ["foo" + ++i]: i,
-        ["foo" + ++i]: i
+    const prefix = 'half';
+    const people = {
+        [prefix + 'man']: 'Tyrion',
+        [prefix + 'hand']: 'Qhorin',
+        [prefix + 'mast']: true
     };
     
-    console.log(a.foo1); // 1
-    console.log(a.foo2); // 2
-    console.log(a.foo3); // 3
+    console.log(people.halfman);    // → Tyrion
+    console.log(people.halfhand);   // → Qhorin
+    console.log(people.halfmast);   // → true
 
 };
 ```

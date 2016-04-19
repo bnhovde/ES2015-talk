@@ -8,10 +8,7 @@ Example: Syntax and simple usage
 ```javascript
 {
     // Syntax
-    Object.assign(target, source_1, ..., source_n);
-    
-    
-    
+    Object.assign(targetObj, source, source2, source3);
     
 }
 ```
@@ -21,7 +18,7 @@ Example: Real-world use case
 
 ```javascript
 {
-    export default function UIModal(userOptions) {
+    function UIModal(userOptions) {
 
         const DOM;
         const defaults = {

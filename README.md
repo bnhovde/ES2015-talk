@@ -81,8 +81,9 @@ ______
 
 ## Introduction
 
-* -> Welcome
+* -> Welcome, thanks for coming
 * -> Personal intro (name/role)
+* -> X is the name of talk. Not sexy. Surprised show up.
 * -> Talk intro (ES6, "new" features, put them into practice and benefit from)
 * -> Realized, after proposing talk, ES6 = huge. Worried about length.
 * -> Q: Using ES6 today? In production?
@@ -97,6 +98,8 @@ Hi all, thanks for coming.
 My name is Bård, I’m a Front-End Developer working at CDD, we’re a small digital agency.
 
 I’m here to talk about ES6. About the "new" features and how to put them into practice and benefit from them.
+
+"ES6 in production" is the name of the talk.
 
 When I suggested doing this talk back in December I remember thinking that it'd be a quick and easy talk to put together. I'd been using ES6 in a couple of projects and felt like I had a pretty good grasp of the basics.
 
@@ -113,7 +116,7 @@ Ok, so for you[the ones that do], this will be more of a refresher. And please s
 ## Goals
 
 * -> Javascript: where it is, where it's going
-* -> ES6 - very large - focus on befenicial features.
+* -> ES6 - very large - focus on beneficial features.
 * -> Lots of primitives for library builders, might not see unless actively look
 * -> What's next? Upcoming features - ES2016
 
@@ -238,13 +241,12 @@ ______
 * -> S: Tweet
 * -> S: Bower, things shift towards npm. npm3 = flat
 * -> S: npm implosion.
-* -> ES6 landed turbulent time, so much else to learn
-* -> ES6: not all or nothing. Not like framework.
-* -> ES6: adopt features as you learn
 
 ---
 
 The JavaScript ecosystem in 2016 is a pretty chaotic place. There's lots of articles written on this. You've probably heard phrases like "JavaScript fatigue" or "tooling fatigue" being used, and rightly so.
+
+> [slide: https://twitter.com/iamdevloper/status/702464176954875904]
 
 If you've tried setting up a modern js JavaScript stack from scratch in the last year you've probably felt some of this pain. Have a look at this. 
 
@@ -254,7 +256,6 @@ This is the root folder of a very popular Redux/React "starter kit".
 
 The amount of config and dotfiles are staggering. What do they all do? If you're just starting out with JavaScript in 2016 you're in for a rough start.
 
-> [slide: https://twitter.com/iamdevloper/status/702464176954875904]
 
 
 So what else has happened in 2016?
@@ -279,19 +280,15 @@ We don't want to go back to having one monolithic library doing everything like 
 
 What we got out of it was a better unpublishing rules from npm.
 
-So why am I talking about this? What does it have to do with ES6? Well, I think ES6 landed in a turbulent time, and although it brings a lot of good things I think a lot of people are holding off because there's so much else to learn.
-
-It's not an all-or-nothing deal. As long as you're transpiling you can adopt features one at a time. You don't have to read the full spec before you start writing ES6.
-
-If you adopt a new framework then you can't just pick and mix like this, so it's quite nice to be able to slowly adopt features as you see fit.
-
 ...
 
 ______
 
 ## ES6/2015
 
-* -> "out" for ~ 1 year
+* -> ES6 landed turbulent time, so much else to learn
+* -> ES6: not all or nothing. Not like framework.
+* -> ES6: adopt features as you learn
 * -> Naming acronyms. Clear this up!
 * -> S: ES6 = big. 6 years.
 * -> New yearly schedule
@@ -300,7 +297,11 @@ ______
 
 ---
 
-Okay, so ES6 has been officially "out" for close to a year now.
+So why am I talking about this? What does it have to do with ES6? Well, I think ES6 landed in a turbulent time, and although it brings a lot of good things I think a lot of people are holding off because there's so much else to learn.
+
+It's not an all-or-nothing deal. As long as you're transpiling you can adopt features one at a time. You don't have to read the full spec before you start writing ES6.
+
+If you adopt a new framework then you can't just pick and mix like this, so it's quite nice to be able to slowly adopt features as you see fit.
 
 There's so many naming conventions and acronyms out there. ES6, ES2015, ES.next Harmony.. I'd like to attempt to clear this up, hopefully this won't just confuse you more.
 
@@ -411,7 +412,7 @@ __
 
 ---
 
-Browser support for es6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
+Browser support for ES6 is a little patchy. most modern browsers have good coverage, but IE11 and Safari are tailing a little.
 
 Demo: [http://kangax.github.io/compat-table/es6](http://kangax.github.io/compat-table/es6)
 
@@ -526,11 +527,34 @@ ______
 * -> Upcoming features
 * -> Show Features
 * -> Web assembly. Ann in june by Eich. Low level bunary compile target.
+* -> JS - difficult place. comp target + easy to work with for humans
+* -> WASM - Heavy duty applicaitons and games
+* -> WASM - Not writing actual language
+* -> JS - Keep growing
 
 ---
 
+> [slide: the future]
+
+All right, I want to talk about some upcoming features. Some of them are pretty cool.
+
+First of all, let's talk about ES2016, or ES7 as it would have been named with the old system.
+
+Remember when I said yearly releases would be smaller? Well..
+
+> [slide: ES2016]
+
+- Array.prototype.includes
+- Exponentiation Operator
+
+That's it.
+
+
     * Observables
-    * Async await (ES8/2017)
+    * Async await (ES8/2017) Hot!
+    
+    
+    
     
 
 > [slide: web assembly]
@@ -548,9 +572,11 @@ I'm by no means an expert, but from what I understand:
 
 > [slide: web assembly & js chart]
 
-JavaScript is currently in a difficult position, being both a compiler target and also 
+JavaScript is currently in a difficult position, being both a compiler target and also easy to work with for humans.
 
-Levels the web playing field for other languages.
+Web Assembly levels the web playing field by being a great compilation target for other languages.
+
+I can see it being used for heavy duty applicaitons and games in the future, but I don't think people will be writing web assembly.
     
 ______
     

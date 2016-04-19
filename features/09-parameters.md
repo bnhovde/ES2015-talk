@@ -4,63 +4,59 @@
 
 There's a few new ways of managing parameters in ES6:
 
-
-## Default Parameters:
-
-Setting default parameters. Similar to destructuring.
-
-Example:
-
-```javascript
-{
-    const person = {
-        name: 'Draco',
-        age: 673
-    }
-    
-    const { name = 'Ricardo', height = '180cm' } = person;
-    
-    console.log(name);      // Draco
-    console.log(height);    // 180cm
-};
-```
+- Default parameters (already covered)
+- Rest parameters
+- Named Parameters
 
 
-## Rest Parameters:
+## Rest Parameters
 
-Turns argumets into an array
+Turns arguments into an array, useful for handling indefinite arguments.
 
 ```javascript
 {
+    const arguments = ['test', 'test2', 'okay', 2, {}, null];
+    
     // ES5
-    function logEach() {
-        var things = Array.prototype.slice.call(arguments);
-        things.forEach(function (thing) {
-            console.log(thing);
-        });
+    function printAllArguments1() {
+        for (var i=0; i < arguments.length; i++) {
+            console.log(arguments[i]);
+        }
     }
-    logEach("a", "b", "c");
     
     // ES6
-    function logEach(...things) {
+    function printAllArguments2(...things) {
         things.forEach(function (thing) {
             console.log(thing);
         });
     }
-    logEach("a", "b", "c");
+    
+    printAllArguments1(); // → test, test2, okay, 2, {}, null
+    printAllArguments2(); // → test, test2, okay, 2, {}, null
     
 }
 ```
 
 
 
-## Spread Parameters:
+## Named Parameters
 
-
+Useful for options objects
 
 ```javascript
 {
 
+    // ES5
+    function startNewGame(options) {
+        var playerName = options.name || 'player';
+        var gameLevel  = options.level  || 1;
+        // ...
+    }
+
+    // ES6
+    function startNewGame({ name = 'player', level = 1}) {
+        // ...
+    }
 }
 ```
 
@@ -70,4 +66,8 @@ Turns argumets into an array
 
 For future projects:
 
-- 
+- Options/settings conf objects
+- Unknown number of arguments
+
+## Sources:
+https://github.com/DrkSephy/es6-cheatsheet#parameters
