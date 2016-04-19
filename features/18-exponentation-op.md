@@ -1,38 +1,25 @@
 
 # Exponentiation Operator (ES2016)
 
-
-
-
-
-Example: Async functions without promises
+The Exponentiation Operator (**) is an operator for exponentiation
 
 ```javascript
 {
-      
+    Array.prototype.includes(value : any) : boolean
+    
+    
+    // ES5
+    Math.pow(x, y);
+    
+    // ES6
+    x ** y;
+    
+    // Example
+    const twoTimesTwo = 2 ** 2; // 4
+    const fourTimesFourTimesFour = 4 ** 3; // 64
 }
 ```
-        
-
-Example: Creating a promise
-
-```javascript
-{
-   
-}
-```
-
-- 
-- 
-- 
-
-
-
-## Use case: 
-
-For future projects:
-
-- Any string & variable mixing
-- Multi-line strings
 
 ## Sources:
+
+http://www.2ality.com/2016/02/exponentiation-operator.html

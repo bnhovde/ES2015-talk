@@ -1,7 +1,7 @@
 
 # Object.assign (polyfill)
 
-
+- works like jquery extend
 
 Example: Syntax and simple usage
 
@@ -9,6 +9,13 @@ Example: Syntax and simple usage
 {
     // Syntax
     Object.assign(targetObj, source, source2, source3);
+    
+    const o1 = { a: 1 };
+    const o2 = { b: 2 };
+    const o3 = { c: 3 };
+
+    const newObj = Object.assign(o1, o2, o3);
+    console.log(newObj); // { a: 1, b: 2, c: 3 }
     
 }
 ```
@@ -37,19 +44,14 @@ Example: Real-world use case
 }
 ```
 
-- 
-- 
-- 
-
-
-
 ## Use case: 
 
 For future projects:
 
-- Any string & variable mixing
-- Multi-line strings
+- Config objects
+- Combining objects
 
 ## Sources:
 
 http://www.2ality.com/2014/01/object-assign.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
