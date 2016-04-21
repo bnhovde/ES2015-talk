@@ -75,25 +75,23 @@ Example: Creating a promise 1/2
 }```
 
 - The promise constructor takes one argument, a callback with two parameters, resolve and reject. 
-- Running new Promise will immediately call the function passed in as an argument. 
 
+- Running new Promise will immediately call the function passed in as an argument. 
 
 Example: Creating a promise 2.2
 
 ```javascript
 {
-    var promise = new Promise(
+    const getName = new Promise(
         function (resolve, reject) {
             
             // Do something async here!
+            setTimeout(() => resolve({name: 'Bård'}), 2000)
+            
+            // Or, with ES5 syntax:
             setTimeout( function(){
-                
-                if (/* async successful? */) {
-                    resolve(value); // success
-                } else {
-                    reject(reason); // failure
-                }
-            }, 1000);
+                return resolve({name: 'Bård'})
+            }, 2000)
         }
     );
 }
@@ -107,10 +105,13 @@ Example: Using promise
 
 ```javascript
 {
-    promise.then(function(result) {
+    getName.then(function(user) {
         // process result
+        console.log(user.name)
+        
     }, function(err) {
         // handle error
+        console.log('error! error!')
     });
 }
 ```
@@ -118,6 +119,7 @@ Example: Using promise
 ## Chaining: 
 
 - .then() is the most important method
+- registers callbacks to receive either the eventual value or the reason why the promise cannot be fulfilled
 - accepts two arguments (Both are optional, can add a callback for the success or failure case only)
 - then always returns a new promise
 

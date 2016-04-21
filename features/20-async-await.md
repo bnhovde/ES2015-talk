@@ -14,17 +14,20 @@ Example: async vs sync
 ```javascript
 {
     // Async function
-    function getDailyJoke() {
-        fetch('http://joke.org', {}).then( response => {
-            return response.body.joke;
+    function getStarship() {
+        return fetch('https://swapi.co/api/starships/9/').then( response => {
+            return response.json().name;
         })
     }
-    
+
     // Sync function
-    function sayJoke() {
-        const joke = getDailyJoke();
-        console.log(joke); // undefined
+    function printStarship() {
+        const starship = getStarship();
+        console.log(starship);
     }
+
+    printStarship(); // undefined
+    
 }
 ```
 
@@ -32,41 +35,42 @@ Async await allows us to write synchronous code that is actually asynchronous.
 
 By marking the parent function as async and the asyc operation with await, js will stop execution internally until the async operation has finished. 
 
-Example: Utopia: Async functions
-
-```javascript
-{
-    // Promise
-    function getFirstUser() {
-        return getUsers().then(function(users) {
-            return users[0].name;
-        });
-    }
-    
-    // Async await
-    async function getFirstUser() {
-        let users = await getUsers();
-        return users[0].name;
-    }
-}
-```
-        
-
 Example: Reworked function 1
 
 ```javascript
 {
     // Async function
-    function getDailyJoke() {
-        fetch('http://joke.org', {}).then( response => {
-            return response.body.joke;
+    function getStarship() {
+        return fetch('https://swapi.co/api/starships/9/').then( response => {
+            return response.json().name;
         })
     }
+
+    // Async await function
+    async function printStarship() {
+        const starship = await getStarship();
+        console.log(starship);
+    }
+
+    printStarship(); // Death Star
+}
+```
+
+Example: Same problem solved with promises
+
+```javascript
+{
+    // Promise
+    function getDailyJoke() {
+        fetch('http://joke.org', {}).then(function(response) {
+            return response.body.joke;
+        });
+    }
     
-    // Sync function
-    async function sayJoke() {
-        let joke = await getDailyJoke();
-        console.log(joke); // What's blue and smelly? Grandpa smurf!
+    // Async await
+    async function getDailyJoke() {
+        let response = await fetch('http://joke.org', {});
+        return response.body.joke;
     }
 }
 ```

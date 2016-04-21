@@ -5,9 +5,7 @@ The Exponentiation Operator (**) is an operator for exponentiation
 
 ```javascript
 {
-    Array.prototype.includes(value : any) : boolean
-    
-    
+
     // ES5
     Math.pow(x, y);
     

@@ -26,7 +26,7 @@ Turns arguments into an array, useful for handling indefinite arguments.
     
     // ES6
     function printAllArguments2(...things) {
-        things.forEach(function (thing) {
+        things.forEach( thing => {
             console.log(thing);
         });
     }

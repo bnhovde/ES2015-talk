@@ -238,6 +238,7 @@ ______
 
 * -> Chaotic place. "JS Fatigue", "Tooling fatigue"
 * -> S: folder. Config files.
+* -> S: React/redux back to single state tree
 * -> S: Tweet
 * -> S: Bower, things shift towards npm. npm3 = flat
 * -> S: npm implosion.
@@ -479,7 +480,6 @@ ______
     * for of
     * Object.assign
     * Classes
-    * Object literals
     
 
 (TIME: 60)
@@ -495,6 +495,8 @@ ______
 * -> build example
 
 ---
+
+Babel transpiles ES6 into ES5. It's also got a polyfill that will allow you to use features that can't be polyfilled so easily.
 
 > !demo .babelrc
 
@@ -542,20 +544,16 @@ First of all, let's talk about ES2016, or ES7 as it would have been named with t
 
 Remember when I said yearly releases would be smaller? Well..
 
+### ES2016
+
 > [slide: ES2016]
 
-- Array.prototype.includes
-- Exponentiation Operator
+    * Array.prototype.includes
+    * Exponentiation Operator
 
 That's it.
 
-
-    * Observables
-    * Async await (ES8/2017) Hot!
-    
-    
-    
-    
+### Web Assembly
 
 > [slide: web assembly]
 
@@ -577,6 +575,17 @@ JavaScript is currently in a difficult position, being both a compiler target an
 Web Assembly levels the web playing field by being a great compilation target for other languages.
 
 I can see it being used for heavy duty applicaitons and games in the future, but I don't think people will be writing web assembly.
+
+
+### Other upcoming ES features
+
+
+    * Observables
+    * Async await (ES8/2017) Hot!
+    
+    
+    
+    
     
 ______
     
@@ -607,6 +616,8 @@ Simple benefits:
 
 - No more `self = this` (arrows)
 - Less data validation in functions (default parameters)
+- End of callback hell (promises)
+- Super-easy object value extraction (destructuring)
 
 Words of caution:
 
@@ -618,7 +629,7 @@ Words of caution:
 
 > By this I don’t mean that using ES6 syntax is a bad idea – quite the opposite, see I’m writing an article about ES6! My concern lies with the fact that when we adopt ES6 features we must do it because they’ll absolutely improve our code quality, and not just because of the "cool factor" – whatever that may be.
 
-> -- ponyfoo guy
+> -- Nicolás Bevacqua - ponyfoo.com
 
 Don't get fatigued! Keep it simple!
 

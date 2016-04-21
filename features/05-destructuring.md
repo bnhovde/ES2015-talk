@@ -79,8 +79,8 @@ Example:
     // Useful when you only care about certain parameters
     
     const menu = {
-        appetiser: 'flea soup'
-        mains: 'locust eggs'
+        appetiser: 'flea soup',
+        mains: 'locust eggs,
         dessert: 'goblin sorbet'
     }
     

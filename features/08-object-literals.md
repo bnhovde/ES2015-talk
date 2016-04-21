@@ -7,37 +7,6 @@ Object literals have been given more functionality with ES6.
 - Dynamic property names
 
 
-## Setting of prototype
-
-```javascript
-{
-    
-    // ES5
-    var Person = function() {
-        
-        // Methods
-        greet = function() {
-            console.log('hi!');
-        }
-    };
-    
-    Person.prototype.greet = function() {
-        console.log('hi!');
-    }
-    
-    Employee.prototype = Object.create(Person.prototype);
-
-
-    // ES6
-    var person = {
-        __proto__: person,
-        name : 'Chud'
-    };
-
-};
-```
-
-
 ## Method shorthands
 
 - Object methods now look like methods
@@ -89,14 +58,6 @@ Example:
 };
 ```
 
-
-
-## Use case: 
-
-For future projects:
-
-- Any string & variable mixing
-- Multi-line strings
 
 ## Sources
 
