@@ -37,6 +37,27 @@ Turns arguments into an array, useful for handling indefinite arguments.
 }
 ```
 
+## Spread operator
+
+"A better apply"
+
+```javascript
+{
+    var args = [0, 1, 2];
+    function myFunction(x, y, z) { }
+    
+    // ES5
+    myFunction.apply(null, args);
+    
+    // ES6
+    myFunction(...args);
+    
+    // Or even
+    myFunction(...[1,2,3]);
+    
+}
+```
+
 
 
 ## Named Parameters

@@ -526,8 +526,9 @@ ______
 
 ## ES7/2016 and beyond
 
+* -> ES2016 - small
+* -> Show ES2016 Features
 * -> Upcoming features
-* -> Show Features
 * -> Web assembly. Ann in june by Eich. Low level bunary compile target.
 * -> JS - difficult place. comp target + easy to work with for humans
 * -> WASM - Heavy duty applicaitons and games
