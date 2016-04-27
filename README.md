@@ -1,10 +1,8 @@
 # ES2015 In Production
 
-!!! This is a very WIP document of an upcoming ES6 talk.
+Rough transcript + source code for demo & examples.
 
-Contains rough notes for a possible transcript + source code for demo & examples.
-
-Slides will be located [here](https://slides.com/bardhovde/es2015/) when completed.
+Slides can be found [here](https://slides.com/bardhovde/es6/).
 
 __
 
